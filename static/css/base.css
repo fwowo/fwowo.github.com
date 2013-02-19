@@ -33,3 +33,8 @@ ins,a{text-decoration:none;}
 .fn-mt40{margin-top:40px;}
 
 .fn-img{display:block;width:100%;}
+
+.fn-noborder{border:0;}
+.fn-nomargin{margin:0;}
+.fn-nopadding{padding:0;}
+
