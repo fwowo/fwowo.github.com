@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>King</title>
+<link rel="shortcut icon" type="image/x-icon" href="/imgserver/king.ico" />
+<link rel="stylesheet" href="/static/css/base.css" />
+<link rel="stylesheet" href="/static/css/king/common.css" />
+<script src="/static/js/jquery-1.9.0.min.js"></script>
+</head>
+<body>
+<div class="w-bar fn-mt10">
+	<div class="u-head fn-clear">
+		<div class="logo kinglogo"></div>
+		<ul class="nav fn-clear fn-mt20">
+			<li><a href="/index.html">开发日志</a></li>
+			<li><a href="/king.html">系统工具</a></li>
+			<li class="current"><a href="/solution.html">解决方案</a></li>
+			<li><a href="/case.html">项目案例</a></li>
+		</ul>
+	</div>
+</div>
+<div class="w-bar fn-mt10">
+	<div class="u-main">
+		<h2><span>页面的拆分与重建</span> / 2013.02.25</h2>
+		<div class="content">
+			<p>每个项目都应该做拆分的操作，至少要把框架、头尾独立出来，因为这些在项目里是公用的且频繁使用的。将之分离出来的这部分代码文件，我们称之为母版，剩余的那部称之为子版。项目里的页面便由子版套用母版的模式完成，由此我们对此项目便可更好的进行管理。</p>
+			<p class="fn-mt20">页面的拆分大致是如此，但在实际操作中会遇到远比理想状态更多的问题。页面拆分后，母版中的标题、样式、脚本并不足够满足页面的需求，由此我们又不得不对母版做更多可拓展的方案。我想很多计划做拆分而没成功的项目估计都是死在这里的吧。</p>
+			<p class="fn-mt20">在很多语言里，页面是可以互相引用的，确实通过这样的引用也能实现页面的拆分，然而这样的引用是在页面层了。虽然已经很不错，不过我想做的更变态些，设立源码层，编写编译层，通过编译层组装源码，最终生成页面到可执行的页面层。看似这将会是很庞大的工程，其实不然，只要你抽些编码的时间花在思考逻辑上，思路通了，水到渠成。</p>
+			<p class="fn-mt20">到此，我们拆分了页面，又根据拆分需要，我们拆分了结构。回归到我们真正的目的，我们为什么做拆分？我的观点是为了让一切变得可管理。那么让我们细数下都有哪些是需要可管理的，页面的标题、引用的CSS文件、JS文件、子版套用母版。这些仅是我所能想到的。</p>
+			<p class="fn-mt20">需要管理的元素也列出来了，那么又该如何管理？一般大家可能会考虑在子版里增加标签之类的，来将关联这些元素，已达到重建的目的。如此操作确实不错，然而既然我们都做到这一步，为何不再更可管理一点，比如把这些元素做为key放在JSON文件里，通过编辑这个文件的key对应的value来实现关联。</p>
+			<p class="fn-mt20">以上这些都理清楚后，剩下的仅仅只是组装了。根据使用的编码语言的不同，编写编译层，读取JSON文件解析关联性，重建页面。</p>
+		</div>
+	</div>
+</div>
+<div class="u-foot fn-clear">
+	<div class="fn-left">http://fwowo.github.com</div>
+	<div class="fn-right">xjia.jin@gmail.com</div>
+</div>
+</body>
+</html>

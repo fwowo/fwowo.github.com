@@ -1,0 +1,40 @@
+.u-main .icons{}
+.u-main .icons ul{
+	width: 978px;
+	padding-left: 2px;
+}
+.u-main .icons li{
+	float: left;
+	margin: 0 20px 20px 0;
+	border: solid 1px #f2f2f2;
+	background-color: #f8f8f8;
+}
+.u-main .icons .pic{
+	width: 100px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	overflow: hidden;
+}
+.u-main .icons .pic img{
+	vertical-align: middle;
+	max-width: 100px;
+	max-height: 80px;
+}
+.u-main .icons .picname{
+	height: 20px;
+	line-height: 20px;
+	background-color: #f2f2f2;
+	text-align: center;
+	color: #bbb;
+	font-family: "Microsoft YaHei";
+	text-shadow: 1px 1px 1px #fff;
+}
+.u-main .icons a{
+	color: #bbb;
+	text-decoration: none;
+}
+.u-main .icons a:hover .picname{
+	color: #aaa;
+	text-shadow: none;
+}

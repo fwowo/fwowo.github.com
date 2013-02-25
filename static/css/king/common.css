@@ -94,6 +94,13 @@ html{color:#282828;background:#eaeaea;}
 	color: #888;
 	font-family: "Microsoft YaHei";
 }
+.u-main .title a{
+	color: #888;
+	text-decoration: none;
+}
+.u-main .title a:hover{
+	color: #0088ff;
+}
 .u-main .date{
 	float: right;
 	font-size: 16px;
@@ -112,52 +119,19 @@ html{color:#282828;background:#eaeaea;}
 	font-family: "Courier New", Courier, monospace;
 }
 .u-main .note{
-	line-height: 20px;
+	line-height: 24px;
 	color: #bbb;
 	font-size: 14px;
 }
-.u-main .icons{}
-.u-main .icons ul{
-	width: 978px;
-	padding-left: 2px;
+.u-main .content{
+	padding: 20px;
+	line-height: 24px;
+	color: #666;
+	font-size: 14px;
 }
-.u-main .icons li{
-	float: left;
-	margin: 0 20px 20px 0;
-	border: solid 1px #f8f8f8;
-	background-color: #fafafa;
+.u-main .content p{
+	text-indent: 2em;
 }
-.u-main .icons .pic{
-	width: 100px;
-	height: 80px;
-	line-height: 80px;
-	text-align: center;
-	overflow: hidden;
-}
-.u-main .icons .pic img{
-	vertical-align: middle;
-	max-width: 100px;
-	max-height: 80px;
-}
-.u-main .icons .picname{
-	height: 20px;
-	line-height: 20px;
-	background-color: #f8f8f8;
-	text-align: center;
-	color: #bbb;
-	font-family: "Microsoft YaHei";
-	text-shadow: 1px 1px 1px #fff;
-}
-.u-main .icons a{
-	color: #bbb;
-	text-decoration: none;
-}
-.u-main .icons a:hover .picname{
-	color: #aaa;
-	text-shadow: none;
-}
-
-
 
 
 
