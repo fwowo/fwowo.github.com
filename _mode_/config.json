@@ -1,0 +1,23 @@
+{
+	"default": {
+		"template": "default.html",
+		"title": "King",
+		"curIndex": "current"
+	},
+	"king.html": {
+		"template": "default.html",
+		"title": "King",
+		"css": "/static/css/king/king.css",
+		"curKing": "current"
+	},
+	"solution.html":{
+		"template": "default.html",
+		"title": "King",
+		"curSolution": "current"
+	},
+	"solution/*.html":{
+		"template": "default.html",
+		"title": "King",
+		"curSolution": "current"
+	}
+}
