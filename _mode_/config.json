@@ -19,5 +19,15 @@
 		"template": "default.html",
 		"title": "King",
 		"curSolution": "current"
+	},
+	"kingstatic/index.html":{
+		"template": "kingstatic.html",
+		"title": "King Static",
+		"curIndex": "current"
+	},
+	"kingstatic/style.html":{
+		"template": "kingstatic.html",
+		"title": "King Static",
+		"curStyle": "current"
 	}
 }

@@ -2,35 +2,30 @@
 <html>
 <head>
 <meta charset="gb2312" />
-<title>King Static</title>
+<title>{$title}</title>
 <link rel="shortcut icon" type="image/x-icon" href="/imgserver/king.ico" />
 <link rel="stylesheet" href="/static/css/base.css" />
 <link rel="stylesheet" href="/static/css/king/common.css" />
-
+{$css}
 </head>
 <body>
 <div class="w-bar fn-mt10">
 	<div class="u-head fn-clear">
 		<div class="logo"><span>Static Server</span></div>
 		<ul class="nav fn-clear fn-mt20">
-			<li class=""><a href="index.html">底层</a></li>
-			<li class="current"><a href="style.html">样式库</a></li>
-			<li class=""><a href="module.html">组件</a></li>
-			<li class=""><a href="png.html">公用图片</a></li>
+			<li class="{$curIndex}"><a href="index.html">底层</a></li>
+			<li class="{$curStyle}"><a href="style.html">样式库</a></li>
+			<li class="{$curModule}"><a href="module.html">组件</a></li>
+			<li class="{$curPng}"><a href="png.html">公用图片</a></li>
 		</ul>
 	</div>
 </div>
-<div class="w-bar fn-mt10">
-	<div class="u-main">
-		<div class="title">鏍峰紡搴擄細</div>
-		<div class="note">note</div>
-	</div>
-</div>
+{#content}
 <div class="u-foot fn-clear">
 	<div class="fn-left">http://fwowo.github.com</div>
 	<div class="fn-right">xjia.jin@gmail.com</div>
 </div>
 <script src="/static/js/jquery-1.9.0.min.js"></script>
-
+{$js}
 </body>
 </html>
