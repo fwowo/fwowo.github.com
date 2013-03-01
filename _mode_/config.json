@@ -29,5 +29,34 @@
 		"template": "kingstatic.html",
 		"title": "King Static",
 		"curStyle": "current"
+	},
+	"kingstatic/module.html":{
+		"template": "kingstatic.html",
+		"title": "King Static",
+		"curModule": "current",
+		"css": "/static/css/kingstatic/module.css"
+	},
+	"kingstatic/png.html":{
+		"template": "kingstatic.html",
+		"title": "King Static",
+		"curPng": "current"
+	},
+	"kingstatic/module/jwplayer.html":{
+		"template": "kingstatic.html",
+		"title": "King Static",
+		"curModule": "current",
+		"js": ["/static/jwplayer/jwplayer.js", "/static/js/kingstatic/jwplayer.js"]
+	},
+	"kingstatic/module/ckplayer.html":{
+		"template": "kingstatic.html",
+		"title": "King Static",
+		"curModule": "current",
+		"js": ["/static/ckplayer/ckplayer_clear.js", "/static/js/kingstatic/ckplayer.js"]
+	},
+	"kingstatic/module/wmvplayer.html":{
+		"template": "kingstatic.html",
+		"title": "King Static",
+		"curModule": "current",
+		"js": ["/static/wmvplayer/silverlight.js", "/static/wmvplayer/wmvplayer.js", "/static/js/kingstatic/wmvplayer.js"]
 	}
 }

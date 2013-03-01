@@ -1181,7 +1181,7 @@ var swfobject=function(){var D="undefined",r="object",S="Shockwave Flash",W="Sho
 ======================================================
 配置可置项
 */
-var creatPlayer = function(divId, width, height, mUrl, mPic) {
+var ckPlayer = function(divId, width, height, mUrl, mPic) {
 	var flashvars={
 		f:mUrl,//视频地址
 		a:'',//调用时的参数，只有当s>0的时候有效
