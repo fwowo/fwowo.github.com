@@ -1,1 +1,1 @@
-wmvPlayer("player", 600, 400, "mms://LIVE.nbtvu.net.cn/px/xy/xy1.wmv", "http://www.ckplayer.com/images/loadimg.jpg");
+wmvPlayer("player", 600, 400, "mms://LIVE.nbtvu.net.cn/px/xy/xy1.wmv", "http://www.ckplayer.com/images/loadimg.jpg", "/static/wmvplayer/wmvplayer.xaml");

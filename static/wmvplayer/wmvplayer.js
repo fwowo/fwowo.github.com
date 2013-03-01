@@ -739,10 +739,9 @@ jeroenwijering.utils.spanstring = function(stp) {
 ======================================================
 配置可置项
 */
-var wmvPlayer = function(divId, width, height, mUrl, mPic) {
+var wmvPlayer = function(divId, width, height, mUrl, mPic, xaml) {
 	var cnt = document.getElementById(divId);
-	var src = 'http://fwowo.github.com/static/wmvplayer/wmvplayer.xaml';
-	alert(mUrl);
+	var src = xaml;
 	var cfg = {
 		file: mUrl,
 		image: mPic,
