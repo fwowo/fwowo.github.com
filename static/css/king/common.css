@@ -133,7 +133,14 @@ html{color:#282828;background:#eaeaea;}
 .u-main .content p{
 	text-indent: 2em;
 }
-
+.u-main .text{
+	line-height: 24px;
+	color: #666;
+	font-size: 14px;
+}
+.u-main .text p{
+	text-indent: 2em;
+}
 
 
 

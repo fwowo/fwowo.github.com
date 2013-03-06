@@ -58,5 +58,12 @@
 		"title": "King Static",
 		"curModule": "current",
 		"js": ["/static/wmvplayer/silverlight.js", "/static/wmvplayer/wmvplayer.js", "/static/js/kingstatic/wmvplayer.js"]
+	},
+	"kingstatic/module/zebra-datepicker.html":{
+		"template": "kingstatic.html",
+		"title": "King Static",
+		"curModule": "current",
+		"css": ["/static/zebra-datepicker/css/zebra_datepicker.css", "/static/css/kingstatic/zebra-datepicker.css"],
+		"js": ["/static/zebra-datepicker/zebra_datepicker_cn.js", "/static/js/kingstatic/zebra-datepicker.js"]
 	}
 }
