@@ -1,69 +1,61 @@
 {
 	"default": {
-		"template": "default.html",
-		"title": "King",
-		"curIndex": "current"
+		"default":{
+			"template": "default.html",
+			"title": "King",
+			"curIndex": "current"
+		},
+		"solution/*.html":{
+			"template": "default.html",
+			"title": "King",
+			"curSolution": "current"
+		},
+		"kingstatic/*.html":{
+			"template": "kingstatic.html",
+			"title": "King Static",
+			"curIndex": "current"
+		},
+		"kingstatic/module/*.html":{
+			"template": "kingstatic.html",
+			"title": "King Static",
+			"curModule": "current"
+		}
 	},
-	"king.html": {
-		"template": "default.html",
-		"title": "King",
-		"css": "/static/css/king/king.css",
-		"curKing": "current"
-	},
-	"solution.html":{
-		"template": "default.html",
-		"title": "King",
-		"curSolution": "current"
-	},
-	"solution/*.html":{
-		"template": "default.html",
-		"title": "King",
-		"curSolution": "current"
-	},
-	"kingstatic/index.html":{
-		"template": "kingstatic.html",
-		"title": "King Static",
-		"curIndex": "current"
-	},
-	"kingstatic/style.html":{
-		"template": "kingstatic.html",
-		"title": "King Static",
-		"curStyle": "current"
-	},
-	"kingstatic/module.html":{
-		"template": "kingstatic.html",
-		"title": "King Static",
-		"curModule": "current",
-		"css": "/static/css/kingstatic/module.css"
-	},
-	"kingstatic/png.html":{
-		"template": "kingstatic.html",
-		"title": "King Static",
-		"curPng": "current"
-	},
-	"kingstatic/module/jwplayer.html":{
-		"template": "kingstatic.html",
-		"title": "King Static",
-		"curModule": "current",
-		"js": ["/static/jwplayer/jwplayer.js", "/static/js/kingstatic/jwplayer.js"]
-	},
-	"kingstatic/module/ckplayer.html":{
-		"template": "kingstatic.html",
-		"title": "King Static",
-		"curModule": "current",
-		"js": ["/static/ckplayer/ckplayer_clear.js", "/static/js/kingstatic/ckplayer.js"]
-	},
-	"kingstatic/module/wmvplayer.html":{
-		"template": "kingstatic.html",
-		"title": "King Static",
-		"curModule": "current",
-		"js": ["/static/wmvplayer/silverlight.js", "/static/wmvplayer/wmvplayer.js", "/static/js/kingstatic/wmvplayer.js"]
-	},
-	"kingstatic/module/zebra-datepicker.html":{
-		"template": "kingstatic.html",
-		"title": "King Static",
-		"curModule": "current",
-		"css": ["/static/zebra-datepicker/css/zebra_datepicker.css", "/static/css/kingstatic/zebra-datepicker.css"],
-		"js": ["/static/zebra-datepicker/zebra_datepicker_cn.js", "/static/js/kingstatic/zebra-datepicker.js"]
+	"page": {
+		"king.html": {
+			"css": "/static/css/king/king.css",
+			"curIndex": "",
+			"curKing": "current"
+		},
+		"solution.html":{
+			"curIndex": "",
+			"curSolution": "current"
+		},
+		"kingstatic/style.html":{
+			"curIndex": "",
+			"curStyle": "current"
+		},
+		"kingstatic/module.html":{
+			"curIndex": "",
+			"curModule": "current",
+			"css": "/static/css/kingstatic/module.css"
+		},
+		"kingstatic/png.html":{
+			"curIndex": "",
+			"curPng": "current"
+		},
+		"kingstatic/module/jwplayer.html":{
+			"js": ["/static/jwplayer/jwplayer.js", "/static/js/kingstatic/jwplayer.js"]
+		},
+		"kingstatic/module/ckplayer.html":{
+			"js": ["/static/ckplayer/ckplayer_clear.js", "/static/js/kingstatic/ckplayer.js"]
+		},
+		"kingstatic/module/wmvplayer.html":{
+			"js": ["/static/wmvplayer/silverlight.js", "/static/wmvplayer/wmvplayer.js", "/static/js/kingstatic/wmvplayer.js"]
+		},
+		"kingstatic/module/zebra-datepicker.html":{
+			"css": ["/static/zebra-datepicker/css/zebra_datepicker.css", "/static/css/kingstatic/zebra-datepicker.css"],
+			"js": ["/static/zebra-datepicker/zebra_datepicker_cn.js", "/static/js/kingstatic/zebra-datepicker.js"]
+		}
 	}
 }

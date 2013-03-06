@@ -4,6 +4,8 @@ import re
 
 path = os.path.dirname(__file__)
 config = eval(open(os.path.join(path, 'config.json'), 'r').read())
+configDefault = config['default']
+configPage = config['page']
 
 os.chdir(path)
 os.chdir('..')
@@ -27,17 +29,22 @@ def publish():
 				mkFile = filepath.replace(pagePath, pubPath)
 				mkFileUrl = filepath.replace(pagePath + '\\', '')
 				mkFileUrl = mkFileUrl.replace('\\', '/')
+				
+				templateValue1 = configDefault['default']
+				for item in configDefault:
+					itemCompile = item.replace('*', '([\w\-\_]*)')
+					pattern = re.compile(itemCompile)
+					match = pattern.match(mkFileUrl)
+					if match:
+						templateValue1 = configDefault[item]
+						break
+				
 				try:
-					templateValue = config[mkFileUrl]
+					templateValue2 = configPage[mkFileUrl]
+					templateValue = dict(templateValue1, **templateValue2)
 				except:
-					templateValue = config['default']
-					for item in config:
-						itemCompile = item.replace('*', '(\w*)')
-						pattern = re.compile(itemCompile)
-						match = pattern.match(mkFileUrl)
-						if match:
-							templateValue = config[item]
-							break
+					templateValue = templateValue1
+				
 				templatePath = os.path.join(path, 'template\\' + templateValue['template'])
 				if os.path.exists(templatePath):
 					content = open(templatePath, 'r').read()
