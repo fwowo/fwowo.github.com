@@ -1,5 +1,8 @@
 html, body{
+	margin: auto;
+	width: 640px;
 	background-color: #014a8c;
+	overflow: hidden;
 }
 
 .u-head{
@@ -72,8 +75,9 @@ html, body{
 	font-family: "Microsoft YaHei";
 }
 .u-main .newslist p{
-	height: 24px;
-	padding: 3px 0 0 8px;
+	height: 27px;
+	line-height: 27px;
+	padding-left: 8px;
 	border-bottom: solid 1px #155590;
 	overflow: hidden;
 	background: url(../img/round.png) no-repeat 8px 11px;
@@ -105,6 +109,10 @@ html, body{
 	top: 121px;
 	left: 169px;
 }
+.u-main .tvpic .play img{
+	width: 72px;
+	height: 72px;
+}
 
 .u-bottom{
 	margin: auto;
@@ -125,5 +133,6 @@ html, body{
 	overflow: hidden;
 }
 .u-bottom li img{
-	width: 100%;
+	width: 102px;
+	height: 65px;
 }
