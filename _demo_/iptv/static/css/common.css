@@ -1,0 +1,68 @@
+html, body{
+	background-color: #014a8c;
+}
+
+.u-head{
+	height: 70px;
+	background: url(../img/head.jpg) no-repeat left top;
+}
+.u-nav{
+	height: 34px;
+	background: url(../img/nav_bg.gif) repeat-x center top;
+	text-align: center;
+}
+.u-nav ul{
+	display: inline-block;
+	padding-top: 3px;
+}
+.u-nav li{
+	float: left;
+	width: 57px;
+	height: 26px;
+	line-height: 26px;
+	padding: 0 9px;
+	text-align: center;
+}
+.u-nav li.line{
+	width: 2px;
+	padding: 0;
+	overflow:hidden;
+	background: url(../img/nav_line.png) no-repeat left top;
+}
+.u-nav li a{
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+	color: #fff;
+}
+.u-nav li.current{
+	background: url(../img/nav.png) no-repeat center top;
+}
+
+.u-main{
+	margin: 10px auto 0;
+	width: 628px;
+}
+.u-main .news{
+	float: left;
+	width: 230px;
+	height: 324px;
+	overflow: hidden;
+	background: url(../img/news.jpg) no-repeat left top;
+}
+.u-main .tv{
+	float: right;
+	width: 398px;
+	height: 324px;
+	overflow: hidden;
+	background: url(../img/tv.jpg) no-repeat left top;
+}
+
+.u-bottom{
+	margin: auto;
+	width: 628px;
+	height: 84px;
+	overflow: hidden;
+	background: url(../img/bottom.jpg) no-repeat left top;
+}
+
+
