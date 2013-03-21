@@ -14,8 +14,12 @@ html, body{
 }
 .u-head .marquee{
 	float: right;
-	margin-top: 36px;
-	width: 360px;
+	padding-top: 36px;
+	width: 373px;
+	height: 27px;
+	overflow: hidden;
+}
+.u-head .content{
 	height: 27px;
 	padding-left: 13px;
 	line-height: 27px;
