@@ -34,7 +34,7 @@ html, body{
 	overflow:hidden;
 	background: url(../img/nav_line.png) no-repeat left top;
 }
-.u-nav li a{
+.u-nav li span{
 	float: left;
 	width: 57px;
 	height: 26px;
@@ -44,7 +44,10 @@ html, body{
 	color: #fff;
 	text-align: center;
 }
-.u-nav li.current a{
+.u-nav li a{
+	color: #fff;
+}
+.u-nav li.current{
 	background: url(../img/nav.png) no-repeat center top;
 }
 
