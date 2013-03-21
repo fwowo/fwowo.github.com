@@ -19,9 +19,7 @@ html, body{
 	float: left;
 	width: 57px;
 	height: 26px;
-	line-height: 26px;
 	padding: 0 9px;
-	text-align: center;
 }
 .u-nav li.line{
 	width: 2px;
@@ -30,17 +28,25 @@ html, body{
 	background: url(../img/nav_line.png) no-repeat left top;
 }
 .u-nav li a{
+	display: inline-block;
+	width: 57px;
+	height: 26px;
+	line-height: 26px;
 	font-size: 14px;
 	font-family: "Microsoft YaHei";
 	color: #fff;
+	text-align: center;
+	text-decoration: none;
 }
-.u-nav li.current{
+.u-nav li.current a{
 	background: url(../img/nav.png) no-repeat center top;
 }
 
 .u-main{
 	margin: 10px auto 0;
 	width: 628px;
+	height: 324px;
+	overflow: hidden;
 }
 .u-main .news{
 	float: left;
