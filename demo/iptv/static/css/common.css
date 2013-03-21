@@ -15,7 +15,8 @@ html, body{
 	text-align: center;
 }
 .u-nav ul{
-	display: inline-block;
+	margin: auto;
+	width: 540px;
 	padding-top: 3px;
 }
 .u-nav li{
@@ -31,7 +32,7 @@ html, body{
 	background: url(../img/nav_line.png) no-repeat left top;
 }
 .u-nav li a{
-	display: inline-block;
+	float: left;
 	width: 57px;
 	height: 26px;
 	line-height: 26px;
@@ -39,7 +40,6 @@ html, body{
 	font-family: "Microsoft YaHei";
 	color: #fff;
 	text-align: center;
-	text-decoration: none;
 }
 .u-nav li.current a{
 	background: url(../img/nav.png) no-repeat center top;
@@ -76,24 +76,17 @@ html, body{
 	padding: 3px 0 0 8px;
 	border-bottom: solid 1px #155590;
 	overflow: hidden;
+	background: url(../img/round.png) no-repeat 8px 11px;
 }
 .u-main .newslist a{
 	display: block;
 	padding-left: 14px;
-	background: url(../img/round.png) no-repeat left 8px;
 	color: #fff;
-	text-decoration: none;
 }
 .u-main .bottommore{
 	width: 224px;
-	text-align: right;
-}
-.u-main .bottommore a{
-	display: inline-block;
-	width: 35px;
 	height: 18px;
-	overflow: hidden;
-	background: url(../img/more.gif) no-repeat left top;
+	text-align: right;
 }
 .u-main .tvpic{
 	position: relative;
@@ -111,7 +104,6 @@ html, body{
 	height: 72px;
 	top: 121px;
 	left: 169px;
-	background: url(../img/play.png) no-repeat left top;
 }
 
 .u-bottom{
