@@ -7,10 +7,7 @@ html, body{
 
 .u-head{
 	height: 70px;
-	background: url(../img/head.jpg) no-repeat left top;
-	text-align: right;
-	font-size: 14px;
-	color: #fff;
+	background: url(../img/head.jpg) no-repeat left top;	
 }
 .u-head .marquee{
 	float: right;
@@ -19,11 +16,15 @@ html, body{
 	height: 27px;
 	overflow: hidden;
 }
-.u-head .content{
+.u-head .mcon{
 	height: 27px;
-	padding-left: 13px;
 	line-height: 27px;
 	background: url(../img/marquee.png) no-repeat right top;
+	font-size: 14px;
+	color: #fff;
+}
+.u-head .content{
+	padding-left: 13px;
 }
 
 .u-nav{
@@ -112,12 +113,10 @@ html, body{
 .u-main .tvpic{
 	position: relative;
 	padding: 13px 0 0 14px;
-	width: 373px;
-	height: 292px;
-	overflow: hidden;
 }
 .u-main .tvpic img{
-	width: 100%;
+	width: 373px;
+	height: 292px;
 }
 .u-main .tvpic .play{
 	position: absolute;
