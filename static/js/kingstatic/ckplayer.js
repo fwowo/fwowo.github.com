@@ -1,1 +1,1 @@
-ckPlayer("player", 600, 400, "rtmp://61.175.103.117:554/live/zst001", "http://www.ckplayer.com/images/loadimg.jpg");
+ckPlayer("player", 600, 400, "rtsp://61.175.103.117:554/live/zst001", "http://www.ckplayer.com/images/loadimg.jpg");
