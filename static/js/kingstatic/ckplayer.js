@@ -1,1 +1,0 @@
-ckPlayer("player", 600, 400, "http://movie.ks.js.cn/flv/2011/11/8-1.flv", "http://www.ckplayer.com/images/loadimg.jpg");
