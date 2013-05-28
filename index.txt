@@ -4,6 +4,7 @@
 		{"title": "ckplayer 播放器", "pic": "/static/img/ckplayer.jpg", "url": "/demo/ckplayer.html"},
 		{"title": "zebra-datepicker 日期插件", "pic": "/static/img/zebra.jpg", "url": "/demo/zebra.html"},
 		{"title": "Raphael 矢量图", "pic": "/static/img/raphael_test.jpg", "url": "/demo/raphael_test.html"},
-		{"title": "KISSY Overlay 弹出框", "pic": "/static/img/kissy_overlay.jpg", "url": "/demo/kissy_overlay.html"}
+		{"title": "KISSY Overlay 弹出框", "pic": "/static/img/kissy_overlay.jpg", "url": "/demo/kissy_overlay.html"},
+		{"title": "KF Tab1", "pic": "/static/img/kf_tab1.png", "url": "/demo/kf_tab1.html"}
 	]
 }
