@@ -23,6 +23,7 @@
 	position: absolute;
 	left: 6px;
 	bottom: 4px;
+	z-index: 9;
 }
 .kf-slide-icon li{
 	float: left;
@@ -64,9 +65,9 @@
 <script src="http://fwowo.github.io/static/js/jquery-1.9.0.min.js"></script>
 <script src="http://fwowo.github.io/static/kf/kf.js"></script>
 <script>
-kf.use('slide1.0', function(){
+kf.use('slide1.1', function(){
 	var slide = new kf.slide('kj-slide', {
-		effect: 'horizontal', // vertical
+		effect: 'horizontal', // vertical | fade
 		autoPlay: true,
 		autoTime: 5000,
 		autoRound: true,
@@ -81,9 +82,9 @@ kf.use('slide1.0', function(){
 <script src="/static/kf/kf.js"></script>
 <script>
 kf['host'] = '';
-kf.use('slide1.0', function(){
+kf.use('slide1.1', function(){
 	var slide = new kf.slide('kj-slide', {
-		effect: 'horizontal', // vertical
+		effect: 'horizontal', // vertical | fade
 		autoPlay: true,
 		autoTime: 5000,
 		autoRound: true,
