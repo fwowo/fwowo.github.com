@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312" />
+<title>fwowo.com</title>
+<link rel="shortcut icon" type="image/x-icon" href="/static/img/f.ico" />
+<link rel="stylesheet" href="/static/css/base.css" />
+<link rel="stylesheet" href="/static/css/demo.css" />
+<style>
+.kf-overlay{
+	background-color: #fff;
+}
+.kf-overlay-close{
+	position: absolute;
+	right: 10px;
+	top: 9px;
+	width: 12px;
+	height: 12px;
+	background: url(http://img01.taobaocdn.com/tps/i1/T1KQ1VXtRcXXcbU07.-12-12.gif) no-repeat left top;
+	overflow: hidden;
+}
+.kf-overlay-head{
+	padding: 6px 8px;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #1d558e;
+	color: #fff;
+}
+.kf-overlay-body img{
+	display: block;
+}
+.kf-overlay-foot{
+	padding: 7px 10px;
+	background-color: #e5e6e8;
+	color: #1e5490;
+	text-align: right;
+}
+</style>
+</head>
+<body>
+<div class="u-wrap">
+	<div>KY.Overlay: <button id="J-show" style="padding:4px 8px;">显示弹出框</button></div>
+	<div class="code fn-mt20">
+<xmp><script src="http://fwowo.github.io/static/js/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.github.io/static/kf/kf.js"></script>
+<script>
+kf.use('overlay1.0', function(){
+	var overlay = new kf.overlay({
+		width: 'auto',
+		height: 'auto',
+		closeBtn: true,
+		headContent: null,
+		bodyContent: null,
+		footContent: null,
+		mask: true,
+		maskClose: true
+	});
+	overlay.ready();
+	overlay.content({
+		closeBtn: true,
+		headContent: '新概念火锅',
+		bodyContent: '<img src="http://img02.taobaocdn.com/tps/i2/T11BaCXpVjXXahT_rS-300-150.png">',
+		footContent: '全场8.5折'
+	});
+	$('#J-show').click(function(){
+		overlay.show();
+	});
+});
+</script></xmp>
+	</div>
+</div>
+<script src="/static/js/jquery-1.9.0.min.js"></script>
+<script src="/static/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('overlay1.0', function(){
+	var overlay = new kf.overlay({
+		width: 'auto',
+		height: 'auto',
+		closeBtn: true,
+		headContent: null,
+		bodyContent: null,
+		footContent: null,
+		mask: true,
+		maskClose: true
+	});
+	overlay.ready();
+	overlay.content({
+		closeBtn: true,
+		headContent: '新概念火锅',
+		bodyContent: '<img src="http://img02.taobaocdn.com/tps/i2/T11BaCXpVjXXahT_rS-300-150.png">',
+		footContent: '全场8.5折'
+	});
+	$('#J-show').click(function(){
+		overlay.show();
+	});
+});
+</script>
+</body>
+</html>

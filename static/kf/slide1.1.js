@@ -30,12 +30,12 @@ kf['slide'] = function(obj, config){
 	}
 };
 kf.augment(kf['slide'], {
-	// ³õÊ¼»¯
+	// åˆå§‹åŒ–
 	ready: function(){
 		if (this.config['effect'] == 'fade') {
 			this.config['autoRound'] = false;
 		}
-		// ÊÇ·ñÑ­»·
+		// æ˜¯å¦å¾ªç¯
 		if (this.config['autoRound']) {
 			this.pannel.eq(0).clone().appendTo(this.content);
 			this.pannel.eq(-1).clone().prependTo(this.content);
@@ -48,7 +48,7 @@ kf.augment(kf['slide'], {
 		} else {
 			this.index = 0;
 		}
-		// »¬¶¯·½Ê½
+		// æ»‘åŠ¨æ–¹å¼
 		if (this.config['effect'] == 'horizontal') {
 			this.content.addClass('fn-clear');
 			this.pannel.addClass('fn-left');
@@ -65,11 +65,11 @@ kf.augment(kf['slide'], {
 			});
 			this.pannel.eq(this.index).css('z-index', 2);
 		}
-		// ÊÇ·ñÓĞicon
+		// æ˜¯å¦æœ‰icon
 		if (this.config['iconState']) {
 			this.creaticon();
 		}
-		// ÊÇ·ñ×Ô¶¯²¥·Å
+		// æ˜¯å¦è‡ªåŠ¨æ’­æ”¾
 		if (this.config['autoPlay']) {
 			var _this = this;
 			this.autoTime = setTimeout(function(){
@@ -79,7 +79,7 @@ kf.augment(kf['slide'], {
 	},
 	play: function(){
 		var _this = this;
-		// ÊÇ·ñÓĞicon
+		// æ˜¯å¦æœ‰icon
 		if (this.config['iconState']) {
 			this.icon.removeClass('current');
 			if (this.config['autoRound']) {
@@ -92,17 +92,18 @@ kf.augment(kf['slide'], {
 				var index = changeIndex - 1;
 			} else {
 				var index = this.index;
-			}			
+			}
 			this.icon.eq(index).addClass('current');
 		}
-		// Çå³ıÖØ½¨×Ô¶¯Ê±¼ä
-		if (this.config['autoPlay']) {
+		// æ¸…é™¤é‡å»ºè‡ªåŠ¨æ—¶é—´
+		var au = this.config['autoPlay'];
+		if (au){
 			clearTimeout(this.autoTime);
 			this.autoTime = setTimeout(function(){
 				_this.next();
 			}, this.config['autoTime']);
 		}
-		// »¬¶¯¶¯»­
+		// æ»‘åŠ¨åŠ¨ç”»
 		goLong = this.long * this.index;
 		if (this.config['effect'] == 'horizontal') {
 			this.wrap.stop();
@@ -135,7 +136,7 @@ kf.augment(kf['slide'], {
 		} else {
 			this.index --;
 		}
-		// ÊÇ·ñÑ­»·
+		// æ˜¯å¦å¾ªç¯
 		if (this.config['autoRound']){
 			if (this.index < 0 || this.index >= this.length) {
 				if (this.index < 0) {
@@ -167,7 +168,7 @@ kf.augment(kf['slide'], {
 		this.go(-1);
 	},
 	goto: function(index){
-		// ÊÇ·ñÑ­»·
+		// æ˜¯å¦å¾ªç¯
 		if (this.config['autoRound']){
 			if (this.index == 0 || this.index == this.length - 1) {
 				if (this.index == 0) {
@@ -202,8 +203,8 @@ kf.augment(kf['slide'], {
 			});
 			this.iconObj.append(newObj);
 		}
+		this.obj.append(this.iconObj);
 		this.icon = this.iconObj.find('li');
 		this.icon.eq(0).addClass('current');
-		this.obj.append(this.iconObj);
 	}
 });
