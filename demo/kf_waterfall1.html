@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312" />
+<title>fwowo.com</title>
+<link rel="shortcut icon" type="image/x-icon" href="/static/img/f.ico" />
+<link rel="stylesheet" href="/static/css/base.css" />
+<link rel="stylesheet" href="/static/css/demo.css" />
+<style>
+.kf-waterfall-column{
+	float: left;
+	padding:4px;
+}
+.kf-waterfall-column li{
+	margin-bottom: 8px;
+	width: 200px;
+	padding: 5px;
+	border: solid 1px #ccc;
+}
+.kf-waterfall-column li img{
+	width: 100%;
+	display: block;
+}
+.kf-waterfall-more {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: solid 1px #ccc;
+	text-align: center;
+}
+.kf-waterfall-morebtn {
+	border: 0;
+	padding: 12px 24px;
+	background-color: #000;
+	color: #fff;
+	cursor: pointer;
+	font-size: 14px;
+}
+</style>
+</head>
+<body>
+<div class="u-wrap">
+	<div id="kj-waterfall">
+		<div class="fn-clear">
+			<ul class="kf-waterfall-column"></ul>
+			<ul class="kf-waterfall-column"></ul>
+			<ul class="kf-waterfall-column"></ul>
+			<ul class="kf-waterfall-column"></ul>
+		</div>
+		<textarea class="kf-waterfall-model fn-hide"><li><img src="{$pic}"></li></textarea>
+		<div class="kf-waterfall-more">
+			<button class="kf-waterfall-morebtn">加载更多</button>
+		</div>
+	</div>
+	<div class="code fn-mt20">
+<xmp><div id="kj-waterfall">
+	<div class="fn-clear">
+		<ul class="kf-waterfall-column"></ul>
+		<ul class="kf-waterfall-column"></ul>
+		<ul class="kf-waterfall-column"></ul>
+		<ul class="kf-waterfall-column"></ul>
+	</div>
+	<textarea class="kf-waterfall-model fn-hide"><li><img src="{$pic}"></li></textarea>
+	<div class="kf-waterfall-more">
+		<button class="kf-waterfall-morebtn">加载更多</button>
+	</div>
+</div>
+<script src="http://fwowo.github.io/static/js/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.github.io/static/kf/kf.js"></script>
+<script>
+kf.use('waterfall1.0', function(){
+	var waterfall = new kf.waterfall('kj-waterfall', {
+		action: '/static/json/kf_waterfall1-{$page}.txt',
+		actionType: 'json',
+		actionPage: 1,
+		moreBtn: true,
+		autoShow: true
+	});
+});
+</script></xmp>
+	</div>
+</div>
+<script src="/static/js/jquery-1.9.0.min.js"></script>
+<script src="/static/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('waterfall1.0', function(){
+	var waterfall = new kf.waterfall('kj-waterfall', {
+		action: '/static/json/kf_waterfall1-{$page}.txt',
+		actionType: 'json',
+		actionPage: 1,
+		moreBtn: true,
+		autoShow: true
+	});
+});
+</script>
+</body>
+</html>
