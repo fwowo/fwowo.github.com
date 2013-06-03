@@ -1,16 +1,5 @@
 ﻿{
 	"data": [
-<<<<<<< HEAD
-		{"title": "jwplayer 播放器", "pic": "/static/img/jwplayer.jpg", "url": "/demo/jwplayer.html"},
-		{"title": "ckplayer 播放器", "pic": "/static/img/ckplayer.jpg", "url": "/demo/ckplayer.html"},
-		{"title": "zebra-datepicker 日期插件", "pic": "/static/img/zebra.jpg", "url": "/demo/zebra.html"},
-		{"title": "Raphael 矢量图", "pic": "/static/img/raphael_test.jpg", "url": "/demo/raphael_test.html"},
-		{"title": "KISSY Overlay 弹出框", "pic": "/static/img/kissy_overlay.jpg", "url": "/demo/kissy_overlay.html"},
-		{"title": "KF-Tab1 tab切换", "pic": "/static/img/kf_tab1.png", "url": "/demo/kf_tab1.html"},
-		{"title": "KF-Slide1 滑动效果", "pic": "/static/img/kf_slide1.jpg", "url": "/demo/kf_slide1.html"},
-		{"title": "KF-Overlay1 弹出框", "pic": "/static/img/kf_overlay1.png", "url": "/demo/kf_overlay1.html"},
-		{"title": "KF-Kill1 浏览器升级提示", "pic": "/static/img/kf_kill1.png", "url": "/demo/kf_kill1.html"}
-=======
 		{"title": "jwplayer 播放器", "img": "/static/img/jwplayer.jpg", "href": "/demo/jwplayer.html"},
 		{"title": "ckplayer 播放器", "img": "/static/img/ckplayer.jpg", "href": "/demo/ckplayer.html"},
 		{"title": "zebra-datepicker 日期插件", "img": "/static/img/zebra.jpg", "href": "/demo/zebra.html"},
@@ -21,6 +10,5 @@
 		{"title": "KF-Overlay1 弹出框", "img": "/static/img/kf_overlay1.png", "href": "/demo/kf_overlay1.html"},
 		{"title": "KF-Kill1 浏览器升级提示", "img": "/static/img/kf_kill1.png", "href": "/demo/kf_kill1.html"},
 		{"title": "KF-WaterFall1 瀑布流", "img": "/static/img/kf_waterfall1.jpg", "href": "/demo/kf_waterfall1.html"}
->>>>>>> up warerfall
 	]
 }
