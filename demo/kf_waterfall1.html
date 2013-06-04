@@ -67,13 +67,14 @@
 <script src="http://fwowo.github.io/static/js/jquery-1.9.0.min.js"></script>
 <script src="http://fwowo.github.io/static/kf/kf.js"></script>
 <script>
-kf.use('waterfall1.0', function(){
+kf.use('waterfall1.1', function(){
 	var waterfall = new kf.waterfall('kj-waterfall', {
 		action: '/static/json/kf_waterfall1-{$page}.txt',
 		actionType: 'json',
 		actionPage: 1,
 		moreBtn: true,
-		autoShow: true
+		autoShow: true,
+		effect: 'fade' // slide | show
 	});
 });
 </script></xmp>
@@ -83,13 +84,14 @@ kf.use('waterfall1.0', function(){
 <script src="/static/kf/kf.js"></script>
 <script>
 kf['host'] = '';
-kf.use('waterfall1.0', function(){
+kf.use('waterfall1.1', function(){
 	var waterfall = new kf.waterfall('kj-waterfall', {
 		action: '/static/json/kf_waterfall1-{$page}.txt',
 		actionType: 'json',
 		actionPage: 1,
 		moreBtn: true,
-		autoShow: true
+		autoShow: true,
+		effect: 'fade' // slide | show
 	});
 });
 </script>

@@ -8,10 +8,11 @@ for (i=0; i<tdLen; i++) {
 	$('.u-wrap').append(tdObj);
 }
 kf['host'] = '';
-kf.use('waterfall1.0', function(){
+kf.use('waterfall1.1', function(){
 	var waterfall = new kf.waterfall('kj-waterfall', {
 		action: '/index.txt',
-		moreBtn: false
+		moreBtn: false,
+		effect: 'fade'
 	});
 });
 	

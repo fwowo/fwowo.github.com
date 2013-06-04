@@ -9,7 +9,8 @@
 		actionType: 'json',
 		actionPage: 1,
 		moreBtn: true,
-		autoShow: true
+		autoShow: true,
+		effect: 'fade'
 	};
 	if (config) {
 		$.extend(this.config, config);
@@ -71,11 +72,12 @@ kf.augment(kf['waterfall'], {
 					});
 				});
 				if (_this.data.length > 0) {
-					if (_this.config['moreBtn']) {
-						_this.more.removeClass('fn-hide');
-					}
 					if (currentPage == _this.config['actionPage'] && _this.config['autoShow']) {
 						_this.show();
+					} else {
+						if (_this.config['moreBtn']) {
+							_this.more.removeClass('fn-hide');
+						}
 					}
 				}
 			}
@@ -84,17 +86,39 @@ kf.augment(kf['waterfall'], {
 	// 展示数据
 	show: function(){
 		var _this = this;
-		$.each(this.data, function(){
-			var data = this;
-			var content = _this.model;
+		if (this.config['moreBtn']) {
+			this.more.addClass('fn-hide');
+		}
+		this.dataLen = this.data.length;
+		this.rankShow(0);
+	},
+	// 排队显示
+	rankShow: function(index){
+		var _this = this;
+		if (index < this.dataLen) {
+			var data = this.data[index];
+			var content = this.model;
 			$.each(data, function(key, val){
 				var newReg = new RegExp('{\\$' + key + '}', 'g');
 				content = content.replace(newReg, val);
 			});
 			var newObj = $(content);
-			_this.minCol().append(newObj);
-		});
-		if (this.config['moreBtn']) {
+			newObj.css('display', 'none');
+			this.minCol().append(newObj);
+			if (this.config['effect'] == 'fade') {
+				newObj.fadeIn('fast', function(){
+					_this.rankShow(index + 1);
+				});
+			} else if (this.config['effect'] == 'slide') {
+				newObj.slideDown('fast', function(){
+					_this.rankShow(index + 1);
+				});
+			} else {
+				newObj.show('fast', function(){
+					_this.rankShow(index + 1);
+				});
+			}
+		} else {
 			this.action();
 		}
 	},
