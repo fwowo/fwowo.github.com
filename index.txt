@@ -1,14 +1,1 @@
-﻿{
-	"data": [
-		{"title": "jwplayer 播放器", "img": "/static/img/jwplayer.jpg", "href": "/demo/jwplayer.html"},
-		{"title": "ckplayer 播放器", "img": "/static/img/ckplayer.jpg", "href": "/demo/ckplayer.html"},
-		{"title": "zebra-datepicker 日期插件", "img": "/static/img/zebra.jpg", "href": "/demo/zebra.html"},
-		{"title": "Raphael 矢量图", "img": "/static/img/raphael_test.jpg", "href": "/demo/raphael_test.html"},
-		{"title": "KISSY Overlay 弹出框", "img": "/static/img/kissy_overlay.jpg", "href": "/demo/kissy_overlay.html"},
-		{"title": "KF-Tab1 tab切换", "img": "/static/img/kf_tab1.png", "href": "/demo/kf_tab1.html"},
-		{"title": "KF-Slide1 滑动效果", "img": "/static/img/kf_slide1.jpg", "href": "/demo/kf_slide1.html"},
-		{"title": "KF-Overlay1 弹出框", "img": "/static/img/kf_overlay1.png", "href": "/demo/kf_overlay1.html"},
-		{"title": "KF-Kill1 浏览器升级提示", "img": "/static/img/kf_kill1.png", "href": "/demo/kf_kill1.html"},
-		{"title": "KF-WaterFall1 瀑布流", "img": "/static/img/kf_waterfall1.jpg", "href": "/demo/kf_waterfall1.html"}
-	]
-}
+{"data": [{"href": "/demo/jwplayer.html", "img": "/static/img/jwplayer.jpg", "title": "jwplayer 播放器"}, {"href": "/demo/ckplayer.html", "img": "/static/img/ckplayer.jpg", "title": "ckplayer 播放器"}, {"href": "/demo/zebra.html", "img": "/static/img/zebra.jpg", "title": "zebra-datepicker 日期插件"}, {"href": "/demo/raphael_test.html", "img": "/static/img/raphael_test.jpg", "title": "Raphael 矢量图"}, {"href": "/demo/kissy_overlay.html", "img": "/static/img/kissy_overlay.jpg", "title": "KISSY Overlay 弹出框"}, {"href": "/demo/kf_tab1.html", "img": "/static/img/kf_tab1.png", "title": "KF-Tab1 tab切换"}, {"href": "/demo/kf_slide1.html", "img": "/static/img/kf_slide1.jpg", "title": "KF-Slide1 滑动效果"}, {"href": "/demo/kf_overlay1.html", "img": "/static/img/kf_overlay1.png", "title": "KF-Overlay1 弹出框"}, {"href": "/demo/kf_kill1.html", "img": "/static/img/kf_kill1.png", "title": "KF-Kill1 浏览器升级提示"}, {"href": "/demo/kf_waterfall1.html", "img": "/static/img/kf_waterfall1.jpg", "title": "KF-WaterFall1 瀑布流"}]}
