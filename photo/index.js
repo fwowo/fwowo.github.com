@@ -30,7 +30,7 @@ var showbox = function(bigimg){
 var closebox = function(id){
 	$('.layer').addClass('fn-hide');
 	$('.layer-bg').addClass('fn-hide');
-	$("#J-info .pic").html('');
+	$("#J-info .pic .success").addClass("fn-hide");
 };
 $('.layer-bg').click(closebox);
 
@@ -43,24 +43,32 @@ var layersize = function(height){
 
 var loadPic = function(src){
 	$("#J-info .pic .error").addClass("fn-hide");
+	$("#J-info .pic .success").addClass("fn-hide");
 	$("#J-info .pic .loadimg").removeClass("fn-hide");
 	var bigpic = new Image();
 	bigpic.src = src;
 	if (bigpic.complete) {
-		$("#J-info .pic").html(bigpic);
+		$("#J-info .pic .success").html(bigpic);
 		$(bigpic).width("100%");
 		$(bigpic).height("auto");
+		$("#J-info .pic .loadimg").addClass("fn-hide");
+		$("#J-info .pic .error").addClass("fn-hide");
+		$("#J-info .pic .success").removeClass("fn-hide");
 		layersize();
 	} else {
 		bigpic.onload = function(){
-			$("#J-info .pic").html(bigpic);
+			$("#J-info .pic .success").html(bigpic);
 			$(bigpic).width("100%");
 			$(bigpic).height("auto");
+			$("#J-info .pic .loadimg").addClass("fn-hide");
+			$("#J-info .pic .error").addClass("fn-hide");
+			$("#J-info .pic .success").removeClass("fn-hide");
 			layersize();
 		};
 		bigpic.onerror = function(){
 			setTimeout(function(){
 				$("#J-info .pic .loadimg").addClass("fn-hide");
+				$("#J-info .pic .success").addClass("fn-hide");
 				$("#J-info .pic .error").removeClass("fn-hide");
 				$('#J-info .pic .error a').data("src", src);
 				layersize();
