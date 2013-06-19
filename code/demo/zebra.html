@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312" />
+<title>fwowo.com</title>
+<link rel="shortcut icon" type="image/x-icon" href="/common/f.ico" />
+<link rel="stylesheet" href="/common/base.css" />
+<link rel="stylesheet" href="../demo.css" />
+<link rel="stylesheet" href="/module/zebra-datepicker/css/zebra_datepicker.css" />
+<style type="text/css">
+.u-wrap input{
+	padding: 4px;
+	border-radius: 4px;
+	border-width: 1px;
+}
+</style>
+</head>
+<body>
+<div class="u-wrap">
+	<div class="text">
+		<p>zebra-datepicker是基于jQuery的日期插件，功能很强大，除了基本功能外，还有一个年度第几周显示功能，此功能深得本人喜爱。它的界面也很简洁端庄，包含两款皮肤，都很美观。以下是两款皮肤的css和js引用地址：</p>
+	</div>
+	<div class="code fn-mt10">
+<xmp><link rel="stylesheet" href="http://fwowo.com/module/zebra-datepicker/css/zebra_datepicker.css" />
+<link rel="stylesheet" href="http://fwowo.com/module/zebra-datepicker/css/zebra_datepicker_metallic.css" />
+<script src="http://fwowo.com/module/zebra-datepicker/zebra_datepicker_cn.js"></script></xmp>
+	</div>
+	<div class="fn-mt20">
+		普通模式：<input id="J-date1" type="text" />
+	</div>
+	<div class="code fn-mt10">
+<xmp>$('#J-date1').Zebra_DatePicker();</xmp>
+	</div>
+	<div class="fn-mt20">
+		日期限定：<input id="J-date2" type="text" />
+	</div>
+	<div class="code fn-mt10">
+<xmp>$('#J-date2').Zebra_DatePicker({
+	direction: true, // true or 1 or [1, 10] or ['2012-08-01', '2012-08-12'] or ['2012-08-01', false]
+	disabled_dates: ['* * * 0,6'] // days months years weekday
+});</xmp>
+	</div>
+	<div class="fn-mt20">
+		日期周期：<input id="J-date3-start" type="text" /> - <input id="J-date3-end" type="text" />
+	</div>
+	<div class="code fn-mt10">
+<xmp>$('#J-date3-start').Zebra_DatePicker({
+	direction: true,
+	pair: $('#J-date3-end')
+});
+$('#J-date3-end').Zebra_DatePicker({
+	direction: true
+});</xmp>
+	</div>
+	<div class="fn-mt20">
+		日期格式：<input id="J-date4" type="text" />
+	</div>
+	<div class="code fn-mt10">
+<xmp>$('#J-date4').Zebra_DatePicker({
+	format: 'M d, Y'
+});</xmp>
+	</div>
+	<div class="fn-mt20">
+		周数：<input id="J-date5" type="text" />
+	</div>
+	<div class="code fn-mt10">
+<xmp>$('#J-date5').Zebra_DatePicker({
+	show_week_number: 'Wk'
+});</xmp>
+	</div>
+	<div class="fn-mt20">
+		初始界面：<input id="J-date6" type="text" />
+	</div>
+	<div class="code fn-mt10">
+<xmp>$('#J-date6').Zebra_DatePicker({
+	view: 'years'
+});</xmp>
+	</div>
+	<div class="fn-mt20">
+		change交互：<input id="J-date7" type="text" /> （view切换时触发）
+	</div>
+	<div class="code fn-mt10">
+<xmp>$('#J-date7').Zebra_DatePicker({
+	onChange: function(view, elements) {
+		console.log(view);
+		console.log(elements);
+	}
+});</xmp>
+	</div>
+	<div class="fn-mt20">
+		固定位置：<input id="J-date8" type="text" />
+	</div>
+	<div class="fn-mt10" id="dateplace" style="height:248px;"></div>
+	<div class="code fn-mt10">
+<xmp>$('#J-date8').Zebra_DatePicker({
+	always_visible: $('#dateplace')
+});</xmp>
+	</div>
+</div>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/module/zebra-datepicker/zebra_datepicker_cn.js"></script>
+<script>
+$('#J-date1').Zebra_DatePicker();
+
+$('#J-date2').Zebra_DatePicker({
+	direction: true, // true or 1 or [1, 10] or ['2012-08-01', '2012-08-12'] or ['2012-08-01', false]
+	disabled_dates: ['* * * 0,6'] // days months years weekday
+});
+
+$('#J-date3-start').Zebra_DatePicker({
+	direction: true,
+	pair: $('#J-date3-end')
+});
+$('#J-date3-end').Zebra_DatePicker({
+    direction: true
+});
+
+$('#J-date4').Zebra_DatePicker({
+	format: 'M d, Y'
+});
+
+$('#J-date5').Zebra_DatePicker({
+	show_week_number: 'Wk'
+});
+
+$('#J-date6').Zebra_DatePicker({
+	view: 'years'
+});
+
+$('#J-date7').Zebra_DatePicker({
+	onChange: function(view, elements) {
+		console.log(view);
+		console.log(elements);
+	}
+});
+
+$('#J-date8').Zebra_DatePicker({
+	always_visible: $('#dateplace')
+});
+</script>
+</body>
+</html>

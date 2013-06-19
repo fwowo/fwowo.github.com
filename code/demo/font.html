@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312" />
+<title>fwowo.com</title>
+<link rel="shortcut icon" type="image/x-icon" href="/common/f.ico" />
+<link rel="stylesheet" href="/common/base.css" />
+<link rel="stylesheet" href="../demo.css" />
+<style>
+div{
+	font-size: 14px;
+}
+input{
+	width: 200px;
+	height: 22px;
+	line-height: 22px;
+	padding: 0 4px;
+}
+em{
+	color: #ccc;
+}
+</style>
+</head>
+<body>
+<div class="u-wrap">
+	<div class="set">
+		<p><strong>文字内容：</strong><input id="J-content" type="text" class="text"></p>
+		<p class="fn-mt10"><strong>字体大小：</strong><input id="J-size" type="text" class="text"></p>
+	</div>
+	<div class="fn-mt20"><strong>中文字体：</strong></div>
+	<div id="J-showcn"></div>
+	<div class="fn-mt20"><strong>英文字体：</strong></div>
+	<div id="J-showen"></div>
+</div>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script>
+var fontCn = ['NSimSun','SimSun','SimHei','"Microsoft YaHei"','FangSong','KaiTi'];
+var fontEn = ['Verdana, Geneva, sans-serif','Georgia, "Times New Roman", Times, serif','"Courier New", Courier, monospace','Arial, Helvetica, sans-serif','Tahoma, Geneva, sans-serif','"Trebuchet MS", Arial, Helvetica, sans-serif','"Arial Black", Gadget, sans-serif','"Times New Roman", Times, serif'];
+var show = function(){
+	var content = $('#J-content').val();
+	var size = $('#J-size').val() + 'px';
+	var showCn = $('#J-showcn');
+	showCn.html('');
+	var showEn = $('#J-showen');
+	showEn.html('');
+	$.each(fontCn, function(index, val){
+		var newObj = $('<p class="fn-mt10"></p>');
+		newObj.css({'font-family': val, 'font-size': size});
+		newObj.html(content + '<em>【' + val + '】</em>');
+		showCn.append(newObj);
+	});
+	$.each(fontEn, function(index, val){
+		var newObj = $('<p class="fn-mt10"></p>');
+		newObj.css({'font-family': val, 'font-size': size});
+		newObj.html(content + '<em>【' + val + '】</em>');
+		showEn.append(newObj);
+	});
+};
+$('input').blur(function(){
+	if ($('#J-content').val() != '' &&  $('#J-size').val() != '') {
+		show();
+	}
+});
+</script>
+</body>
+</html>

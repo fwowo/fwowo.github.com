@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312" />
+<title>fwowo.com</title>
+<link rel="shortcut icon" type="image/x-icon" href="/common/f.ico" />
+<link rel="stylesheet" href="/common/base.css" />
+<link rel="stylesheet" href="../demo.css" />
+</head>
+<body>
+<div class="u-wrap">
+	<div>KF-kill: <button id="J-show" style="padding:4px 8px;">Kill IE6\IE7</button></div>
+	<div class="code fn-mt20">
+<xmp><script src="http://fwowo.com/common/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.com/kf/kf.js"></script>
+<script>
+kf.use('kill1.0', function(){
+	var kill = new kf.kill('ie6,ie7');
+});
+</script></xmp>
+	</div>
+</div>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('kill1.0', function(){
+	var kill = new kf.kill('ie6,ie7');
+	$('#J-show').click(function(){
+		kill.init();
+	});
+});
+</script>
+</body>
+</html>

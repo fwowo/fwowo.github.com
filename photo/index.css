@@ -1,0 +1,157 @@
+@charset "utf-8";
+html {
+	background: url(/common/bg.png) fixed repeat left top;
+	color: #282828;
+}
+
+/* @common */
+.u-wrap{
+	margin: auto;
+	padding-top: 20px
+}
+.u-td{
+	float: left;
+	width: 240px;
+	overflow: hidden;
+}
+.u-td .wrap{
+	padding: 10px;
+}
+.u-td .contain{
+	width: 200px;
+	border: solid 1px #eee;
+	padding: 9px 9px 2px;
+	background-color: #fff;
+}
+.u-td .pic img{
+	display: block;
+	width: 100%;
+}
+.u-td .content{
+	padding: 5px 4px;
+	font-family: "Microsoft YaHei";
+	color: #909090;
+	line-height: 20px;
+	word-break: break-all;
+}
+.u-td .content em{
+	display: block;
+	text-align: right;
+	color: #c0c0c0;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+.u-more{
+	margin: 20px auto 0;
+	width: 200px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 16px;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.7);
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+
+.u-foot{
+	padding: 0 20px;
+	border-top: dashed 1px #d2d2d2;
+	line-height: 32px;
+	color: #aaa;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 14px;
+}
+.u-foot a{
+	color: #aaa;
+	text-decoration: none;
+}
+.u-foot a:hover{
+	color: #ff9900;
+}
+
+/* @layer */
+.layer-bg{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: #000;
+	opacity: 0.7;
+	filter: Alpha(Opacity=70);
+	z-index: 50;
+}
+.layer{
+	position: absolute;
+	width: 960px;
+	left: 0;
+	top: 0;
+	z-index: 51;
+	background-color: #fff;
+}
+
+.u-close{
+	text-align: right;
+	padding: 0 10px;
+}
+.u-close a{
+	display: inline-block;
+	background-color: #000;
+	padding: 5px 10px;
+	color: #fff;
+	text-decoration: none;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+}
+.u-boxwrap{
+	margin: auto;
+	width: 920px;
+	padding: 20px;
+}
+.u-boxwrap .pic img{
+	display: block;
+	width: 100%;
+}
+.u-boxwrap .pic .loadimg{
+	margin: 20px auto;
+	position: relative;
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+}
+.u-boxwrap .pic .loadimg span{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.u-boxwrap .pic .loadimg .text{
+	text-align: center;
+	line-height: 120px;
+	z-index: 2;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 15px;
+	text-shadow: 0 1px 2px #fff;
+}
+.u-boxwrap .pic .loadimg .loading{
+	background: url(img/loadimg.png) no-repeat center center;
+	z-index: 1;
+	-webkit-animation-name: running;
+	-webkit-animation-duration: 3600ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes running{
+	from { -webkit-transform: rotate(0deg) translateZ(0); }
+	to { -webkit-transform: rotate(360deg) translateZ(0); }
+}
+.u-boxwrap .pic .error{
+	margin: 20px auto;
+	width: 120px;
+	line-height: 2;
+	text-align: center;
+	font-family: "Microsoft YaHei";
+	color: #ff6600;
+}

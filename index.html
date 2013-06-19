@@ -2,20 +2,32 @@
 <html>
 <head>
 <meta charset="gb2312" />
-<title>fwowo.com</title>
-<link rel="shortcut icon" type="image/x-icon" href="/static/img/f.ico" />
-<link rel="stylesheet" href="/static/css/base.css" />
-<link rel="stylesheet" href="/static/css/index.css" />
+<title>疯窝里的故事</title>
+<link rel="shortcut icon" type="image/x-icon" href="/common/f.ico" />
+<link rel="stylesheet" href="/common/base.css" />
+<link rel="stylesheet" href="index/index.css" />
 </head>
 <body>
-<div id="kj-waterfall">
-	<div class="u-wrap fn-clear">
-		<div class="u-td kf-waterfall-column"></div>
-	</div>
-	<textarea class="kf-waterfall-model fn-hide"><div class="wrap"><div class="contain"><div class="pic"><a target="_blank" href="{$href}"><img src="{$img}"></a></div><div class="title">{$title}</div></div></div></textarea>
+<div class="u-site">fwowo.com</div>
+<div class="u-nav fn-clear">
+	<textarea id="kj-nav" class="fn-hide">
+	<a href="{$href}" style="background-image: url({$img});"></a>
+	</textarea>
 </div>
-<script src="/static/js/jquery-1.9.0.min.js"></script>
-<script src="/static/kf/kf.js"></script>
-<script src="/static/js/index.js"></script>
+<div class="u-topic">
+	<ul class="fn-clear"></ul>
+	<textarea id="kj-topic" class="fn-hide">
+	<li>
+		<div class="pic"><a target="_blank" href="{$href}"><img src="{$img}"></a></div>
+		<div class="note"><a target="_blank" href="{$href}">{$title}</a></div>
+	</li>
+	</textarea>
+</div>
+<div class="u-foot">
+	<div class="fn-left">http://www.fwowo.com</div>
+	<div class="fn-right">xjia.jin@gmail.com</div>
+</div>
+<script charset="utf-8" src="/common/jquery-1.9.0.min.js"></script>
+<script charset="utf-8" src="index/index.js"></script>
 </body>
 </html>

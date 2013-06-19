@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* @index */
+html{
+	background: url(/common/bg.png) fixed repeat left top;
+	color: #282828;
+}
+
+.u-site, .u-nav a{
+	behavior: url(/common/ie-css3.htc);
+}
+
+.u-site{
+	margin: 30px auto 0;
+	width: 200px;
+	height: 32px;
+	line-height: 32px;
+	background-color: #fff;
+	border: solid 1px #eee;
+	border-radius: 16px;
+	text-align: center;
+	font-size: 18px;
+	color: #999;
+	font-family: "Courier New", Courier, monospace;
+}
+
+.u-nav{
+	margin: 30px auto 0;
+	width: 960px;
+}
+.u-nav a{
+	float: left;
+	margin: 10px;
+	width: 140px;
+	height: 140px;
+	border-radius: 14px;
+	background-color: #e8e8e8;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.u-topic{
+	margin: 30px auto 0;
+	width: 960px;
+	border: dashed 1px #d2d2d2;
+	border-width: 1px 0;
+	padding: 30px 0;
+}
+.u-topic li{
+	float: left;
+	margin: 8px;
+	width: 300px;
+	border: solid 1px #e8e8e8;
+	background-color: #fff;
+}
+.u-topic li .pic{
+	height: 180px;
+	background-color: #f0f0f0;
+	overflow: hidden;
+}
+.u-topic li .pic img{
+	display: block;
+	width: 100%;
+}
+.u-topic li .note{
+	height: 44px;
+	padding: 6px 12px;
+	line-height: 22px;
+	color: #888;
+	font-family: "Microsoft YaHei";
+}
+.u-topic li .note a{
+	color: #888;
+	text-decoration: none;
+}
+.u-topic li .note a:hover{
+	color: #888;
+}
+
+.u-foot{
+	margin: auto;
+	width: 960px;
+	line-height: 32px;
+	color: #aaa;
+	font-family: "Courier New", Courier, monospace;
+}
