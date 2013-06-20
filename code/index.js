@@ -8,11 +8,12 @@ for (i=0; i<tdLen; i++) {
 	$('.u-wrap').append(tdObj);
 }
 kf['host'] = '';
-kf.use('waterfall1.1', function(){
+kf.use('waterfall1.2', function(){
 	var waterfall = new kf.waterfall('kj-waterfall', {
 		action: 'json/index.txt',
 		moreBtn: false,
-		effect: 'fade'
+		effect: 'fade',
+		buffer: 'img'
 	});
 });
 	
