@@ -1,4 +1,4 @@
-﻿var ckPath = "http://fwowo.github.com/static/";
+﻿var ckPath = "http://fwowo.com/module/";
 function ckcpt(){
     var cpt = "";
 	cpt += 'sch_lf.png,0,2,15,-37,0|';//进度栏左边的做圆角的小图片
