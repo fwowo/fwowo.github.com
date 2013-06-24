@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312" />
+<title>代码库</title>
+<link rel="shortcut icon" type="image/x-icon" href="/common/f.ico" />
+<link rel="stylesheet" href="/common/base.css" />
+<link rel="stylesheet" href="../demo.css" />
+<style>
+.kf-list-wrap li{
+	float: left;
+	margin: 0 4px 8px;
+	width: 200px;
+	padding: 5px;
+	border: solid 1px #ccc;
+}
+.kf-list-wrap li p{
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+}
+.kf-list-wrap li img{
+	width: 100%;
+	display: block;
+}
+.kf-list-page{
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: solid 1px #ccc;
+	text-align: right;
+}
+.kf-list-page a{
+	margin: 0 4px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	background-color: #333;
+	text-decoration: none;
+}
+.kf-list-page a.current{
+	color: #f30;
+}
+</style>
+</head>
+<body>
+<div class="u-wrap">
+	<div id="kj-list">
+		<div class="fn-clear">
+			<ul class="kf-list-wrap"><textarea class="kf-list-model fn-hide"><li><p><img src="{$img}"></p></li></textarea></ul>
+		</div>
+		<div class="kf-list-page"><textarea class="kf-list-pagemodel fn-hide"><a href="#">{$page}</a></textarea></div>
+	</div>
+	<div class="code fn-mt20">
+<xmp><div id="kj-list">
+	<div class="fn-clear">
+		<ul class="kf-list-wrap"><textarea class="kf-list-model fn-hide"><li><p><img src="{$img}"></p></li></textarea></ul>
+	</div>
+	<div class="kf-list-page"><textarea class="kf-list-pagemodel fn-hide"><a href="#">{$page}</a></textarea></div>
+</div>
+<script src="http://fwowo.com/common/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.com/kf/kf.js"></script>
+<script>
+kf.use('list1.0', function(){
+	var list = new kf.list('kj-list', {
+		action: '../json/list1_{$page}.txt',
+		actionType: 'json',
+		pageBtn: true
+	});
+});
+</script></xmp>
+	</div>
+</div>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('list1.0', function(){
+	var list = new kf.list('kj-list', {
+		action: '../json/list1_{$page}.txt',
+		actionType: 'json',
+		pageBtn: true
+	});
+});
+</script>
+</body>
+</html>
