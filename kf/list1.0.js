@@ -12,7 +12,6 @@
 	if (config) {
 		$.extend(this.config, config);
 	}
-	this.actpage = this.config['actionPage'];
 	this.data = {};
 	this.ready();
 };

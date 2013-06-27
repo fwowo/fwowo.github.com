@@ -104,6 +104,9 @@ kf.augment(kf['waterfall'], {
 					newImg.onload = function(){
 						_this.rankShowApp(index);
 					};
+					newImg.onerror = function(){
+						_this.rankShow(index + 1);
+					};
 				}
 			} else {
 				this.rankShowApp(index);
