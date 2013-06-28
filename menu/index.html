@@ -8,9 +8,27 @@
 <link rel="stylesheet" href="index.css" />
 </head>
 <body>
+<div class="u-nav fn-clear">餐厅列表</div>
 <div id="kj-list" class="u-wrap">
-	<ul class="kf-list-wrap fn-clear"><textarea class="kf-list-model fn-hide"><li><div class="contain"><div class="pic"><a href="javascript:showbox('{$bigimg}');"><img src="{$smallimg}"></a></div></li></textarea></ul>
-	<div class="kf-list-page"><textarea class="kf-list-pagemodel fn-hide"><a href="#">{$page}</a></textarea></div>
+	<ul class="kf-list-wrap fn-clear">
+	<textarea class="kf-list-model fn-hide">
+		<li>
+			<div class="contain">
+				<div class="pic"><a href="m.html?sign={$sign}"><img src="{$img}"></a></div>
+				<div class="content">
+					<div class="title">{$title} <em>{$em}</em></div>
+					<div class="address">{$address}</div>
+					<div class="fn-clear">
+						<a href="m.html?sign={$sign}" class="btn">查看菜单</a>
+					</div>
+				</div>
+			</div>
+		</li>
+	</textarea>
+	</ul>
+	<div class="u-page fn-clear">
+		<div class="kf-list-page wrap"><textarea class="kf-list-pagemodel fn-hide"><a href="#">{$page}</a></textarea></div>
+	</div>
 </div>
 <div class="u-foot fn-mt20 fn-clear">
 	<div class="fn-left"><a href="/">http://www.fwowo.com</a></div>
@@ -18,7 +36,6 @@
 </div>
 <script charset="utf-8" src="/common/jquery-1.9.0.min.js"></script>
 <script charset="utf-8" src="/kf/kf.js"></script>
-<script charset="utf-8" src="sha.js"></script>
 <script charset="utf-8" src="index.js"></script>
 </body>
 </html>

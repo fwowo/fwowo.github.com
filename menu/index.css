@@ -4,39 +4,99 @@ html {
 }
 
 /* @common */
+.u-nav{
+	margin: 20px auto 15px;
+	width: 932px;
+	background-color: #fff;
+	padding: 10px 14px;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #333;
+	font-family: "Microsoft YaHei";
+	height: 28px;
+	line-height: 28px;
+}
 .u-wrap{
 	margin: auto;
 	width: 960px;
 }
 .u-wrap li{
 	float: left;
-	width: 220px;
-	padding: 10px;
+	width: 230px;
+	padding: 5px;
 	overflow: hidden;
 }
 .u-wrap .contain{
-	background-color: #fff;
 	font-family: "Microsoft YaHei";
+	background-color: #fff;
 }
 .u-wrap .contain .pic{
 	position: relative;
-	width: 220px;
-	height: 100px;
+	width: 230px;
+	height: 160px;
 	overflow: hidden;
 }
 .u-wrap .contain .pic img{
 	display: block;
 	width: 100%;
 }
-.u-wrap .contain .title{
+.u-wrap .content{
+	padding: 4px 6px 6px 8px;
+	line-height: 24px;
+}
+.u-wrap .content .title{
+	font-size: 16px;
+	color: #404040;
+}
+.u-wrap .content .title em{
+	font-size: 14px;
+	color: #808080;
+}
+.u-wrap .content .address{
+	color: #b0b0b0;
+	margin-bottom: 2px;
+	font-family: NSimSun, SimSun;
+}
+.u-wrap .content .btn{
+	float: right;
+	width: 77px;
+	height: 27px;
+	line-height: 27px;
+	color: #fff;
+	text-align: center;
+	background-color: #ff8800;
+	text-decoration: none;
+	border-radius: 2px;
+}
+
+.u-page{
+	margin-top: 20px;
+	padding: 0 5px;
+	text-align: right;
+}
+.u-page .wrap{
+	float: right;
+}
+.u-page a{
+	float: left;
+	margin-left: 10px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	overflow: hidden;
+	text-decoration: none;
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #666;
+	color: #fff;
 	font-size: 14px;
 }
-.u-wrap .contain .address{
-	font-size: 12px;
+.u-page a:hover{
+	background-color: #333;
 }
-.u-wrap .contain .btn{
-	float: right;
-	
+.u-page a.current{
+	font-weight: bold;
+	background-color: #333;
 }
 
 .u-foot{

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312" />
+<title>点菜</title>
+<link rel="shortcut icon" type="image/x-icon" href="/common/f.ico" />
+<link rel="stylesheet" href="/common/base.css" />
+<link rel="stylesheet" href="m.css" />
+</head>
+<body>
+<div class="u-nav fn-clear">
+	<div class="fn-left"><a href="/menu/">餐厅列表</a> &gt; 外婆家</div>
+	<div id="kj-cart" class="cart">
+		<div class="cartlist fn-hide">
+			<ul id="kj-cart-wrap">
+				<textarea id="kj-cart-item">
+				<li class="fn-clear">
+					<span>{$id}</span>
+					<span>{$title}</span>
+					<span class="del"><a href="#" data-id="{$id}"></a></span>
+					<span class="price">￥{$price}</span>
+				</li>
+				</textarea>
+			</ul>
+			<div class="total fn-clear">
+				<span>共 <em id="kj-cart-count"></em> 样菜品</span>
+				<span class="totalprice">小计：<em id="kj-cart-price"></em>元</span>
+			</div>
+			<div class="btn fn-clear">
+				<a id="kj-cart-share" href="javascript:void(0)" title="发送微博@好友">发送微博</a>
+				<a id="kj-cart-url" href="javascript:void(0)" title="生成菜单地址">菜单地址</a>
+			</div>
+		</div>
+		<a href="#" class="link">我的菜单</a>
+	</div>
+</div>
+<div id="kj-wrap" class="u-wrap">
+	<textarea id="kj-model">
+	<div class="kj-class">
+		<h2>{$class}</h2>
+		<ul class="fn-clear"></ul>
+	</div>
+	</textarea>
+	<textarea id="kj-item">
+	<li class="kj-item-{$id}">
+		<div class="contain fn-clear">
+			<div class="chkbox"><span></span></div>
+			<div class="title">{$title}</div>
+			<div class="taste">{$taste}</div>
+			<div class="price">￥<em>{$price}</em></div>
+		</div>
+	</li>
+	</textarea>
+</div>
+<div class="u-foot fn-mt20 fn-clear">
+	<div class="fn-left"><a href="/">http://www.fwowo.com</a></div>
+	<div class="fn-right">xjia.jin@gmail.com</div>
+</div>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3006087460"></script>
+<script charset="utf-8" src="/common/jquery-1.9.0.min.js"></script>
+<script charset="utf-8" src="m.js"></script>
+</body>
+</html>
