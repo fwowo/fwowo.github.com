@@ -184,8 +184,7 @@ function fnShare(){
 		baseContent += itemTitle;
 	} else {
 		baseContent = '';
-	}
-	baseContent += baseUrl;
+	}	
 	return {
 		shareUrl: baseUrl,
 		shareContent: baseContent
@@ -211,16 +210,26 @@ kf.use('overlay1.0', function(){
 	});
 });
 var wb_content = 'default_text';
-$('#kj-cart-share').mouseover(function() {
+$('#kj-cart-share').click(function() {
 	var share = fnShare();
 	if (share['shareContent'] != wb_content) {
 		wb_content = share['shareContent'];
-		WB2.anyWhere(function(W){
-			W.widget.publish({
-				id: "kj-cart-share",
-				default_text: wb_content,
-				refer: "n"
+		// 生成短链接
+		var wbUrl = 'http://api.t.sina.com.cn/short_url/shorten.json?source=3006087460&url_long=' + encodeURIComponent(share['shareUrl']);
+		$.get(wbUrl, function(response){
+			var shortUrl = response[0]['url_short'];
+			var content = wb_content + ' ' + shortUrl;
+			WB2.anyWhere(function(W){
+				W.widget.publish({
+					id: "kj-cart-sharebtn",
+					default_text: content,
+					refer: "n"
+				});
 			});
-		});
+			$('#kj-cart-sharebtn').click();
+		}, 'jsonp');
+	} else {
+		$('#kj-cart-sharebtn').click();
 	}
+	return false;
 });
