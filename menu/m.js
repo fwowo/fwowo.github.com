@@ -225,8 +225,8 @@ $('#kj-cart-share').click(function() {
 					default_text: content,
 					refer: "n"
 				});
+				$('#kj-cart-sharebtn').click();
 			});
-			$('#kj-cart-sharebtn').click();
 		}, 'jsonp');
 	} else {
 		$('#kj-cart-sharebtn').click();
