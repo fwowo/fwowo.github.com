@@ -114,6 +114,37 @@ $.getJSON(menuUrl, function(response){
 	});
 });
 
+// 创建分享按钮
+var wb_content = 'default_text';
+var shareBtn = function(){
+	var share = fnShare();
+	if (share['shareContent'] != wb_content) {
+		wb_content = share['shareContent'];
+		// 生成短链接
+		var wbUrl = 'http://api.t.sina.com.cn/short_url/shorten.json?source=3006087460&url_long=' + encodeURIComponent(share['shareUrl']);
+		$.get(wbUrl, function(response){
+			var shortUrl = response[0]['url_short'];
+			var content = wb_content + ' ' + shortUrl;
+			WB2.anyWhere(function(W){
+				W.widget.publish({
+					id: "kj-cart-share",
+					default_text: content,
+					refer: "n"
+				});
+				$('#kj-cart-share').removeClass('fn-hide');
+				$('#kj-cart-sharetemp').addClass('fn-hide');
+			});
+		}, 'jsonp');
+	} else {
+		$('#kj-cart-share').removeClass('fn-hide');
+		$('#kj-cart-sharetemp').addClass('fn-hide');
+	}
+};
+$('#kj-cart-sharetemp').click(function(){
+	alert('微博接口超时，请重新发送微博！');
+	return false;
+});
+
 // cart
 var cartObj = $('#kj-cart');
 var cartList = cartObj.find('.cartlist');
@@ -131,6 +162,8 @@ var cartItem = $.trim(cartItemObj.val());
 cartItemObj.remove();
 var cartWrap = cartObj.find('#kj-cart-wrap');
 var reviewCart = function(){
+	$('#kj-cart-share').addClass('fn-hide');
+	$('#kj-cart-sharetemp').removeClass('fn-hide');
 	cartWrap.html('');
 	var totleCount = 0;
 	var totlePrice = 0;
@@ -160,6 +193,7 @@ var reviewCart = function(){
 	});
 	cartObj.find('#kj-cart-count').html(totleCount);
 	cartObj.find('#kj-cart-price').html(totlePrice);
+	shareBtn();
 };
 
 // cart btn
@@ -208,28 +242,4 @@ kf.use('overlay1.0', function(){
 		overlay.show();
 		return false;
 	});
-});
-var wb_content = 'default_text';
-$('#kj-cart-share').click(function() {
-	var share = fnShare();
-	if (share['shareContent'] != wb_content) {
-		wb_content = share['shareContent'];
-		// 生成短链接
-		var wbUrl = 'http://api.t.sina.com.cn/short_url/shorten.json?source=3006087460&url_long=' + encodeURIComponent(share['shareUrl']);
-		$.get(wbUrl, function(response){
-			var shortUrl = response[0]['url_short'];
-			var content = wb_content + ' ' + shortUrl;
-			WB2.anyWhere(function(W){
-				W.widget.publish({
-					id: "kj-cart-sharebtn",
-					default_text: content,
-					refer: "n"
-				});
-				$('#kj-cart-sharebtn').click();
-			});
-		}, 'jsonp');
-	} else {
-		$('#kj-cart-sharebtn').click();
-	}
-	return false;
 });
