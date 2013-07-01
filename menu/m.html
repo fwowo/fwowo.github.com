@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="u-nav fn-clear">
-	<div class="fn-left"><a href="/menu/">餐厅列表</a> &gt; 外婆家</div>
+	<div class="fn-left"><a href="/menu/">餐厅列表</a> &gt; <span id="kj-h1"></span> <em id="kj-h2"></em></div>
 	<div id="kj-cart" class="cart">
 		<div class="cartlist fn-hide">
 			<ul id="kj-cart-wrap">
@@ -31,17 +31,17 @@
 				<a id="kj-cart-url" href="javascript:void(0)" title="生成菜单地址">菜单地址</a>
 			</div>
 		</div>
-		<a href="#" class="link">我的菜单</a>
+		<a href="javascript:void(0)" class="link">我的菜单</a>
 	</div>
 </div>
 <div id="kj-wrap" class="u-wrap">
-	<textarea id="kj-model">
+	<textarea id="kj-model" class="fn-hide">
 	<div class="kj-class">
 		<h2>{$class}</h2>
 		<ul class="fn-clear"></ul>
 	</div>
 	</textarea>
-	<textarea id="kj-item">
+	<textarea id="kj-item" class="fn-hide">
 	<li class="kj-item-{$id}">
 		<div class="contain fn-clear">
 			<div class="chkbox"><span></span></div>
@@ -58,6 +58,7 @@
 </div>
 <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3006087460"></script>
 <script charset="utf-8" src="/common/jquery-1.9.0.min.js"></script>
+<script charset="utf-8" src="/kf/kf.js"></script>
 <script charset="utf-8" src="m.js"></script>
 </body>
 </html>

@@ -41,7 +41,7 @@ if (query['item']) {
 }
 var tasteData = {
 	'微辣': ['lajiao', 1],
-	'有点辣': ['lajiao', 2],
+	'小辣': ['lajiao', 2],
 	'中辣': ['lajiao', 3],
 	'特辣': ['lajiao', 4],
 	'变态辣': ['lajiao', 5],
@@ -50,7 +50,15 @@ var tasteData = {
 	'必点': ['tuijian', 3]
 };
 
-// 获取数据
+// 获取店名
+var shopUrl = 'json/' + sign + '_h.txt?r=' + Math.random();
+$.getJSON(shopUrl, function(response){
+	var data = response.data[0];
+	$('#kj-h1').html(data['title']);
+	$('#kj-h2').html(data['em']);
+});
+
+// 获取菜单数据
 var menuUrl = 'json/' + sign + '.txt?r=' + Math.random();
 $.getJSON(menuUrl, function(response){
 	var menuData = {};
@@ -155,28 +163,64 @@ var reviewCart = function(){
 };
 
 // cart btn
-function shareUrl(){
+function fnShare(){
 	var baseUrl = 'http://fwowo.com/menu/m.html?sign=' + sign;
-	var items = '';
-	$.each(cartData, function(id){
-		if (items != '') items += ',';
-		items += id;
+	var baseContent = '亲爱的 ';
+	if (sign == 'home') {
+		baseContent += '@小佳v多多，我想吃你烧的 ';
+	} else {
+		baseContent += '@你的好友，我想吃 ' + $('#kj-h1').html() + $('#kj-h2').html() + ' 的 ';
+	}
+	var itemId = '';
+	var itemTitle = '';
+	$.each(cartData, function(id, val){
+		if (itemId != '') itemId += ',';
+		if (itemTitle != '') itemTitle += '、';
+		itemId += id;
+		itemTitle += val['title'];
 	});
-	if (items != '') baseUrl += '&item=' + items;
-	return baseUrl;
+	if (itemId != '') baseUrl += '&item=' + itemId;
+	if (itemTitle != '') {
+		baseContent += itemTitle;
+	} else {
+		baseContent = '';
+	}
+	baseContent += baseUrl;
+	return {
+		shareUrl: baseUrl,
+		shareContent: baseContent
+	}
 }
-$('#kj-cart-url').click(function(){
-	console.log(shareUrl());
-	return false;
-});
-
-WB2.anyWhere(function(W){
-	W.widget.publish({
-		toolbar:"face,image",
-		button_type: "red",
-		button_size: "big",
-		button_text: "来自小佳个人站",
-		id: "kj-cart-share"
+// 创建弹出框
+kf.use('overlay1.0', function(){
+	var overlay = new kf.overlay({
+		width: '400',
+		headContent: '生成菜单地址：',
+		bodyContent: '<div class="content">http://fwowo.com/menu/m.html?sige=' + sign + '</content>',
+		mask: true,
+		maskClose: true
+	});
+	overlay.ready();
+	$('#kj-cart-url').click(function(){
+		var share = fnShare();
+		overlay.content({
+			bodyContent: '<div class="content">' + share['shareUrl'] + '</content>',
+		});
+		overlay.show();
+		return false;
 	});
 });
-
+var wb_content = 'default_text';
+$('#kj-cart-share').mouseover(function() {
+	var share = fnShare();
+	if (share['shareContent'] != wb_content) {
+		wb_content = share['shareContent'];
+		WB2.anyWhere(function(W){
+			W.widget.publish({
+				id: "kj-cart-share",
+				default_text: wb_content,
+				refer: "n"
+			});
+		});
+	}
+});
