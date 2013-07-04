@@ -124,7 +124,11 @@ var shareBtn = function(){
 		var wbUrl = 'http://api.t.sina.com.cn/short_url/shorten.json?source=3006087460&url_long=' + encodeURIComponent(share['shareUrl']);
 		$.get(wbUrl, function(response){
 			var shortUrl = response[0]['url_short'];
-			var content = wb_content + ' ' + shortUrl;
+			var content = wb_content;
+			if ($(content).length > 120) {
+				content = $.trim(content.substr(0,120)) + '...';
+			}
+			content += ' ' + shortUrl;
 			WB2.anyWhere(function(W){
 				W.widget.publish({
 					id: "kj-cart-share",

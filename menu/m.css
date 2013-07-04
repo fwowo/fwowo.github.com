@@ -46,10 +46,11 @@ html {
 	position: absolute;
 	margin-top: 28px;
 	font-size: 12px;
-	line-height: 26px;
+	line-height: 28px;
 }
 .u-nav .cart .cartlist ul{
-	padding: 8px 14px;
+	padding: 10px 16px;
+	font-size: 14px;
 }
 .u-nav .current .cartlist{
 	display: block;
@@ -58,20 +59,19 @@ html {
 }
 .u-nav .current .cartlist span{
 	float: left;
-	margin-right: 8px;
 }
 .u-nav .current .cartlist .price{
 	float: right;
-	margin-left: 20px;
+	margin-left: 40px;
 	color: #a0a0a0;
 }
 .u-nav .current .cartlist .del{
 	float: right;
-	margin: 0;
+	margin-left: 10px;
 }
 .u-nav .current .cartlist .del a{
 	float: left;
-	margin-top: 7px;
+	margin-top: 9px;
 	width: 13px;
 	height: 12px;
 	background: url(img/del.png) no-repeat left top;
