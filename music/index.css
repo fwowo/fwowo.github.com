@@ -10,6 +10,7 @@ body{
 	top: 0;
 	background-color: #f0f0f0;
 	border-bottom: solid 1px #e0e0e0;
+	z-index: 50;
 }
 .u-player .wrap{
 	margin: auto;
@@ -176,6 +177,9 @@ body{
 	font-family: "Microsoft YaHei";
 	color: #a0a0a0;
 	border-bottom: solid 2px #e4e4e4;
+}
+.u-song .list .listtitle em{
+	font-size: 12px;
 }
 .u-song .list ul{
 	margin-top: 2px;
