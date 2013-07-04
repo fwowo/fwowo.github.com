@@ -381,7 +381,7 @@ kf.augment(kf['audio'], {
 	},
 	addSong: function(id){
 		if ($.inArray(id, this.mySong) < 0) {
-			this.mySong.unshift(id);
+			this.mySong.push(id);
 			this.setCookie();
 		}
 	},
