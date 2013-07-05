@@ -29,7 +29,7 @@ kf.augment(kf['audio'], {
 				$('.u-player .btn').css('margin-top', Math.ceil((audioHeight - 30) / 2) + 'px');
 			}
 			// 调整音量
-			this.player.volume = 0.8;
+			this.player.volume = 0.67;
 			// 监控播放器
 			this.player.addEventListener('ended', function(){
 				_this.autoPlay();
