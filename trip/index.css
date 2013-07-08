@@ -42,28 +42,17 @@ body{
 	color: #a0a0a0;
 	font-family: NSimSun, SimSun;
 }
-.u-wrap .content .init{
-	position: absolute;
-	margin-top: 10px;
-	width: 760px;
-	padding: 20px;
-	line-height: 24px;
-	background-color: #fff;
-	z-index: 91;
-	font-size: 14px;
-	font-family: "Microsoft YaHei";
-	color: #333;
+.u-wrap .content ul{
+	padding-top: 5px;
 }
-.u-wrap .content ul{}
 .u-wrap .content li{
 	float: left;
-	height: 160px;
-	margin: 10px 10px 0 0;
+	height: 100px;
+	margin: 5px 5px 0 0;
 	overflow: hidden;
 }
 .u-wrap .content li img{
-	height: 160px;
-	cursor: pointer;
+	height: 100px;
 }
 
 .u-page{
@@ -90,18 +79,6 @@ body{
 .u-page a.current{
 	font-weight: bold;
 	background-color: #333;
-}
-
-#kj-mask{
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	z-index: 90;
-	background-color: #000;
-	opacity: 0.5;
-	filter: alpha(opacity=50);
 }
 
 .u-foot{
