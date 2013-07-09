@@ -35,7 +35,7 @@ kf.augment(kf['simList'], {
 	// 获取数据
 	action: function(){
 		var _this = this;
-		$.getJSON('json/trip.txt', function(response){
+		$.getJSON('json/trip.txt?r=' + Math.random(), function(response){
 			_this.data = response.data;
 			_this.dataLen = _this.data.length;
 			_this.totalPage = Math.ceil(_this.dataLen / _this.pageSize);
@@ -69,7 +69,7 @@ kf.augment(kf['simList'], {
 			var newObj = $(content);
 			var newImgList = newObj.find('.kj-img').data('img').split(',');
 			$.each(newImgList, function(){
-				newObj.find('.kj-img').append('<li><a target="_blank" href="p.html?sign=' + sign + '"><img src="' + this + '"></a></li>');
+				newObj.find('.kj-img').append('<li><a target="_blank" href="p.html?sign=' + sign + '"><img src="pic/' + sign + this + '.jpg"></a></li>');
 			});
 			this.wrapObj.append(newObj);
 		}
