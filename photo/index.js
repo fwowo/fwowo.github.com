@@ -1,4 +1,4 @@
-var wrapWidth = $('.u-wrap').width() - 20;
+var wrapWidth = $('.u-wrap').width();
 var tdWidth = $('.u-td').width();
 var tdLen = Math.floor(wrapWidth / tdWidth);
 $('.u-wrap').width(tdWidth * tdLen);

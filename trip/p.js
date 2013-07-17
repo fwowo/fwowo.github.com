@@ -20,12 +20,6 @@ if (query['sign']) {
 	location.href = '/trip/';
 }
 
-// 是否有返回按钮
-if (query['i'] && query['i'] == 'b') {
-	$('.u-head .back').attr('href', '/trip/?sign=' + sign);
-	$('.u-head').addClass('kc-back');
-}
-
 // 加载列表
 var mainObj = $('#kj-content');
 mainObj.load('page/' + sign + '.html?r=' + Math.random());
@@ -36,7 +30,8 @@ $.getJSON('json/trip.txt?r=' + Math.random(), function(response){
 	var dataLen = data.length;
 	for (i=0; i<dataLen; i++) {
 		if (data[i]['sign'] == sign) {
-			$('.u-head .title').html(data[i]['title'] + '&nbsp;&nbsp;<em>(' + data[i]['date'] + ')</em>');
+			document.title = data[i]['title'];
+			$('h1').html(data[i]['title'] + '&nbsp;&nbsp;<em>(' + data[i]['date'] + ')</em>');
 			break;
 		}
 	}

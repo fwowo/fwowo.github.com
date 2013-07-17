@@ -5,38 +5,40 @@
 <title>相片墙</title>
 <link rel="shortcut icon" type="image/x-icon" href="/common/f.ico" />
 <link rel="stylesheet" href="/common/base.css" />
+<link rel="stylesheet" href="/common/common.css" />
 <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-<div id="kj-waterfall">
-	<div class="u-wrap fn-clear">
-		<div class="u-td kf-waterfall-column"></div>
+<div class="kc-head"></div>
+<div class="kc-body">
+	<div id="kj-waterfall">
+		<div class="u-wrap fn-clear">
+			<div class="u-td kf-waterfall-column"></div>
+		</div>
+		<textarea class="kf-waterfall-model fn-hide"><div class="wrap"><div class="contain"><div class="pic"><a href="javascript:showbox('{$bigimg}');"><img src="{$smallimg}"></a></div><div class="content">{$content}<em>{$psdate}</em></div></div></div></textarea>
+		<div class="kf-waterfall-more u-more fn-hide">加载更多</div>
 	</div>
-	<textarea class="kf-waterfall-model fn-hide"><div class="wrap"><div class="contain"><div class="pic"><a href="javascript:showbox('{$bigimg}');"><img src="{$smallimg}"></a></div><div class="content">{$content}<em>{$psdate}</em></div></div></div></textarea>
-	<div class="kf-waterfall-more u-more fn-hide">加载更多</div>
-</div>
-<div class="layer-bg fn-hide"></div>
-<div class="layer fn-hide">
-	<div class="u-close"><a href="#">关闭窗口</a></div>
-	<div id="J-info" class="u-boxwrap">
-		<div class="pic">
-			<div class="loadimg">
-				<span class="text">loading</span>
-				<span class="loading"></span>
+	<div class="layer-bg fn-hide"></div>
+	<div class="layer fn-hide">
+		<div class="u-close"><a href="#">关闭窗口</a></div>
+		<div id="J-info" class="u-boxwrap">
+			<div class="pic">
+				<div class="loadimg">
+					<span class="text">loading</span>
+					<span class="loading"></span>
+				</div>
+				<div class="error fn-hide">
+					<p><a href="#"><img src="img/jpeg.png"></a></p>
+					<p>图片加载失败</p>
+				</div>
+				<div class="success fn-hide"></div>
 			</div>
-			<div class="error fn-hide">
-				<p><a href="#"><img src="img/jpeg.png"></a></p>
-				<p>图片加载失败</p>
-			</div>
-			<div class="success fn-hide"></div>
 		</div>
 	</div>
 </div>
-<div class="u-foot fn-mt20 fn-clear">
-	<div class="fn-left"><a href="/">http://www.fwowo.com</a></div>
-	<div class="fn-right">xjia.jin@gmail.com</div>
-</div>
+<div class="kc-foot"></div>
 <script charset="utf-8" src="/common/jquery-1.9.0.min.js"></script>
+<script charset="utf-8" src="/common/common.js"></script>
 <script charset="utf-8" src="/kf/kf.js"></script>
 <script charset="utf-8" src="index.js"></script>
 </body>

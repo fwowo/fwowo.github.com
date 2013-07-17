@@ -15,16 +15,19 @@ $('.kc-foot').html('<div class="wrap">\
 	<div class="fn-clear">\
 		<div class="link">\
 			<a href="/">网站首页</a>\
-			<a href="#">关于本站</a>\
-			<a href="#">友情链接</a>\
 		</div>\
-		<div class="weibo"><a target="_blank" href="http://weibo.com/beofish/profile"></a></div>\
+		<div class="weibo"><a target="_blank" href="http://weibo.com/beofish"></a></div>\
 	</div>\
 	<div class="fn-clear">\
 		<div class="fn-left"><span class="en">http://www.fwowo.com</span></div>\
 		<div class="fn-right"><span class="en">xjia.jin@gmail.com</span></div>\
 	</div>\
 </div>');
+
+/*
+	<a href="#">关于本站</a>
+	<a href="#">友情链接</a>
+*/
 
 var headNav = $('#kj-headnav');
 var headNavLi = '<li><a href="{$href}"><img src="{$img}"></a></li>';

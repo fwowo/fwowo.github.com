@@ -1,4 +1,4 @@
-// »ñÈ¡²ÎÊı
+// è·å–å‚æ•°
 var url = document.URL;
 var query = {};
 var urlParam = url.split('?')[1];
@@ -13,14 +13,14 @@ if (urlParam) {
 	});
 }
 
-// ´´½¨Àà
+// åˆ›å»ºç±»
 kf['simList'] = function(){
 	this.obj = $('#kj-list');
 	this.pageSize = 5;
 	this.init();
 };
 kf.augment(kf['simList'], {
-	// ³õÊ¼»¯
+	// åˆå§‹åŒ–
 	init: function(){
 		this.wrapObj = this.obj.find('.kf-list-wrap');
 		this.modelObj = this.obj.find('.kf-list-model');
@@ -32,7 +32,7 @@ kf.augment(kf['simList'], {
 		this.pagemodelObj.remove();
 		this.action();
 	},	
-	// »ñÈ¡Êı¾İ
+	// è·å–æ•°æ®
 	action: function(){
 		var _this = this;
 		$.getJSON('json/trip.txt?r=' + Math.random(), function(response){
@@ -53,7 +53,7 @@ kf.augment(kf['simList'], {
 			_this.createPage(_this.page);
 		});
 	},
-	// Õ¹Ê¾Êı¾İ
+	// å±•ç¤ºæ•°æ®
 	show: function(page){
 		this.wrapObj.html('');
 		var start = (page - 1) * this.pageSize;
@@ -74,7 +74,7 @@ kf.augment(kf['simList'], {
 			this.wrapObj.append(newObj);
 		}
 	},
-	// ´´½¨Ò³Âë
+	// åˆ›å»ºé¡µç 
 	createPage: function(page){
 		var _this = this;
 		this.pageObj.html('');

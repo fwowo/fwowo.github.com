@@ -5,30 +5,32 @@
 <title>¬√”Œ</title>
 <link rel="shortcut icon" type="image/x-icon" href="/common/f.ico" />
 <link rel="stylesheet" href="/common/base.css" />
+<link rel="stylesheet" href="/common/common.css" />
 <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-<div id="kj-list" class="u-wrap">
-	<div class="kf-list-wrap">
-	<textarea class="kf-list-model fn-hide">
-	<div class="contain fn-clear">
-		<div class="date">{$date}</div>
-		<div class="content">
-			<div class="title"><a target="_blank" href="p.html?sign={$sign}">{$title} <em>{$em}</em></a></div>
-			<ul class="kj-img fn-clear" data-img="{$img}"></ul>
+<div class="kc-head"></div>
+<div class="kc-body">
+	<div id="kj-list" class="u-wrap">
+		<div class="kf-list-wrap">
+		<textarea class="kf-list-model fn-hide">
+		<div class="contain fn-clear">
+			<div class="date">{$date}</div>
+			<div class="content">
+				<div class="title"><a target="_blank" href="p.html?sign={$sign}">{$title} <em>{$em}</em></a></div>
+				<ul class="kj-img fn-clear" data-img="{$img}"></ul>
+			</div>
+		</div>
+		</textarea>
+		</div>
+		<div class="u-page fn-clear kf-list-page">
+		<textarea class="kf-list-pagemodel fn-hide"><a href="#">{$page}</a></textarea>
 		</div>
 	</div>
-	</textarea>
-	</div>
-	<div class="u-page fn-clear kf-list-page">
-	<textarea class="kf-list-pagemodel fn-hide"><a href="#">{$page}</a></textarea>
-	</div>
 </div>
-<div class="u-foot fn-mt30 fn-clear">
-	<div class="fn-left"><a href="/">http://www.fwowo.com</a></div>
-	<div class="fn-right">xjia.jin@gmail.com</div>
-</div>
+<div class="kc-foot"></div>
 <script charset="utf-8" src="/common/jquery-1.9.0.min.js"></script>
+<script charset="utf-8" src="/common/common.js"></script>
 <script charset="utf-8" src="/kf/kf.js"></script>
 <script charset="utf-8" src="index.js"></script>
 </body>

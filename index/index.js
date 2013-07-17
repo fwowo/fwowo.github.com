@@ -4,10 +4,10 @@ $('#kj-nav').remove();
 var topicContent = $.trim($('#kj-topic').val());
 $('#kj-topic').remove();
 
-$.getJSON("index/nav.txt?rand=" + Math.random(), function(response){
+$.getJSON("index/nav.txt?t=" + headVt, function(response){
 	var data = response['data'];
 	var dataLen = data.length;
-	var obj = $('.u-nav');
+	var obj = $('.u-nav .wrap');
 	$.each(data, function(){
 		var newContent = navContent;
 		$.each(this, function(key, val){
@@ -38,12 +38,4 @@ $.getJSON("index/topic.txt?rand=" + Math.random(), function(response){
 		});
 		obj.append(newContent);
 	});
-	if (dataLen < 6) {
-		for (i=0; i<6-dataLen; i++) {
-			var newContent = topicContent;
-			var newObj = $(newContent);
-			newObj.find('a').remove();
-			obj.append(newObj);
-		}
-	}
 });

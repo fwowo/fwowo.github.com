@@ -1,13 +1,9 @@
 @charset "utf-8";
-html {
-	background-color: #f4f4f4;
-	color: #282828;
-}
-
-/* @common */
+/* @photo */
 .u-wrap{
 	margin: auto;
-	padding-top: 20px
+	width: 960px;
+	padding: 20px 0;
 }
 .u-td{
 	float: left;
@@ -19,9 +15,9 @@ html {
 }
 .u-td .contain{
 	width: 200px;
-	border: solid 1px #eee;
-	padding: 9px 9px 2px;
+	padding: 10px 10px 2px;
 	background-color: #fff;
+	box-shadow: 0 0 5px #e0e0e0;
 }
 .u-td .pic img{
 	display: block;

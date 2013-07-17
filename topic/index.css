@@ -11,8 +11,9 @@
 	float: left;
 	margin: 6px;
 	width: 300px;
-	border: solid 4px #808080;
+	border: solid 4px #525252;
 	background-color: #fff;
+	border-radius: 3px;
 }
 .u-topic li .pic{
 	height: 180px;
