@@ -11,7 +11,9 @@
 <body>
 <div class="kc-head"></div>
 <div class="kc-body">
-	<div><div id="wb_publisher">dsfaf</div></div>
+	<div class="u-pub fn-clear">
+		<div class="btn" id="wb_publisher"><img class="fn-img" src="publish_btn.png"></div>
+	</div>
 	<div class="u-message"></div>
 </div>
 <div class="kc-foot"></div>
@@ -21,28 +23,22 @@
 <script>
 WB2.anyWhere(function(W){
 	W.widget.publish({
-		action: "pubilish",
-		type: "web",
-		language: "zh_cn",
-		button_type: "red",
-		button_size: "big",
+		toolbar: "face,image",
 		uid: "2479837202",
-		appkey: "3006087460",
 		id: "wb_publisher"
 	});
 });
 </script>
 <script type="text/javascript">
 (function(){
-	var url = "http://widget.weibo.com/distribution/comments.php?width=0&url=auto&border=1&brandline=y&appkey=3006087460&dpc=1";
-	url = url.replace("url=auto", "url=" + document.URL); 
+	var url = "http://widget.weibo.com/distribution/comments.php?width=0&url=http://fwowo.com/message/&border=1&brandline=y&appkey=3006087460&dpc=1";
 	$('.u-message').html('<iframe id="WBCommentFrame" src="' + url + '" scrolling="no" frameborder="0" style="width:100%"></iframe>');
 })();
 </script>
 <script src="http://tjs.sjs.sinajs.cn/open/widget/js/widget/comment.js" charset="utf-8"></script>
 <script type="text/javascript">
 window.WBComment.init({
-    "id": "WBCommentFrame"
+	"id": "WBCommentFrame"
 });
 </script>
 </body>
