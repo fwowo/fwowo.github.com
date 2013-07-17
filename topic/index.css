@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* @topic */
+.u-topic{
+	padding: 30px 0;
+}
+.u-topic .wrap{
+	margin: auto;
+	width: 960px;
+}
+.u-topic li{
+	float: left;
+	margin: 6px;
+	width: 300px;
+	border: solid 4px #808080;
+	background-color: #fff;
+}
+.u-topic li .pic{
+	height: 180px;
+	background-color: #f0f0f0;
+	overflow: hidden;
+}
+.u-topic li .pic img{
+	display: block;
+	width: 100%;
+}
+.u-topic li .note{
+	height: 44px;
+	padding: 6px 12px;
+	line-height: 22px;
+	font-family: "Microsoft YaHei";
+}
+.u-topic li .note a{
+	color: #606060;
+	text-decoration: none;
+}
+.u-topic li .note a:hover{
+	color: #303030;
+}
+
+

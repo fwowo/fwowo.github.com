@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* @common */
+.kc-head{
+	background: url(head.gif) repeat-y center center;
+}
+.kc-head .wrap{
+	margin: auto;
+	width: 960px;
+	height: 44px;
+	line-height: 44px;
+	background-color: #000;
+}
+.kc-head .logo{
+	float: left;
+	padding: 0 20px;
+	background-color: #80ca00;
+	color: #fff;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+.kc-head .nav{
+	float: right;
+	position: relative;
+}
+.kc-head a.link{
+	float: left;
+	margin: 0 20px 0 8px;
+	color: #fff;
+	text-decoration: none;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+}
+.kc-head a.link:hover{
+	color: #ff9900;
+}
+.kc-head .icon{
+	position: absolute;
+	top: 44px;
+	width: 324px;
+	padding: 10px;
+	right: 0;
+	background-color: #000;
+	border-radius: 0 0 5px 5px;
+}
+.kc-head .icon li{
+	float: left;
+	margin: 5px;
+	width: 40px;
+	height: 40px;
+	border: solid 2px #fff;
+	border-radius: 2px;
+}
+.kc-head .icon li img{
+	width: 40px;
+	height: 40px;
+}
+
+.kc-body{
+	background: #f0f0f0;
+}
+
+.kc-foot{
+	background: #000;
+}
+.kc-foot .wrap{
+	margin: auto;
+	width: 960px;
+	padding: 20px 0 10px;
+	text-align: center;
+	line-height: 24px;
+	color: #606060;
+}
+.kc-foot .en{
+	font-family: "Courier New", Courier, monospace;
+}
+.kc-foot .link a{
+	margin-right: 24px;
+	float: left;
+	color: #fff;
+	font-family: "Microsoft YaHei";
+}
+.kc-foot .weibo{
+	float: right;
+}
+.kc-foot .weibo a{
+	display: block;
+	width: 62px;
+	height: 22px;
+	overflow: hidden;
+	background: url(sina.png) no-repeat left top;
+}
