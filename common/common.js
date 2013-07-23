@@ -31,7 +31,8 @@ $('.kc-foot').html('<div class="wrap">\
 
 var headNav = $('#kj-headnav');
 var headNavLi = '<li><a href="{$href}"><img src="{$img}"></a></li>';
-$.getJSON("/index/nav.txt?r=" + Math.random(), function(response){
+var rand = Math.random();
+$.getJSON("/index/nav.txt?rand=" + rand, function(response){
 	var data = response['data'];
 	var dataLen = data.length;
 	var obj = headNav.find('ul');
