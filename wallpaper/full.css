@@ -16,6 +16,7 @@
 .u-wrap .pic img{
 	display: block;
 	width: 100%;
+	height: auto;
 }
 .u-wrap .size{
 	padding: 0 20px;

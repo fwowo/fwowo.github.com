@@ -62,15 +62,14 @@ var showFull = function(sign, id){
 			};
 			// 展示当前图片
 			var newImg = new Image();
-			newImg.src = thisData['fullsize'];
 			if (newImg.complete) {
-				$('#kj-pic').html(newImg);
 				$('#kj-size').html(newImg.width + 'x' + newImg.height);
+				$('#kj-pic').html(newImg);
 				getNext();
 			} else {
 				newImg.onload = function(){
-					$('#kj-pic').html(newImg);
 					$('#kj-size').html(newImg.width + 'x' + newImg.height);
+					$('#kj-pic').html(newImg);
 					getNext();
 				};
 				newImg.onerror = function(){
@@ -80,11 +79,12 @@ var showFull = function(sign, id){
 					$('#kj-pic').append(errPic);
 					$('#kj-pic').append('<p class="errtxt">图片加载失败</p>');
 					errPic.click(function(){
-						location.reload();
+						showFull(sign, id);
 						return false;
 					});
 				};
 			}
+			newImg.src = thisData['fullsize'];
 		} else {
 			$('#kj-pic').html('');
 			$('#kj-pic').append('<p class="error"><img src="img/jpeg.png"></p>');
