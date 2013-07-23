@@ -1,4 +1,7 @@
 @charset "utf-8";
+html{
+	background-color: #000;
+}
 /* @common */
 .kc-head{
 	background: url(head.gif) repeat-y center center;
@@ -42,6 +45,7 @@
 	right: 0;
 	background-color: #000;
 	border-radius: 0 0 5px 5px;
+	z-index: 49;
 }
 .kc-head .icon li{
 	float: left;

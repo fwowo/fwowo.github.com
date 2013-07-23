@@ -31,7 +31,7 @@ $('.kc-foot').html('<div class="wrap">\
 
 var headNav = $('#kj-headnav');
 var headNavLi = '<li><a href="{$href}"><img src="{$img}"></a></li>';
-var headVt = '20130717';
+var headVt = '20130722';
 $.getJSON("/index/nav.txt?t=" + headVt, function(response){
 	var data = response['data'];
 	var dataLen = data.length;

@@ -3,7 +3,7 @@
 .u-pub{
 	margin: auto;
 	width: 960px;
-	padding: 30px 0 20px;
+	padding-top: 30px;
 }
 .u-pub .btn{
 	float: right;
@@ -13,4 +13,5 @@
 .u-message{
 	margin: auto;
 	width: 960px;
+	padding: 20px 0;
 }

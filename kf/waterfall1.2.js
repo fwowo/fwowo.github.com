@@ -26,7 +26,7 @@ kf.augment(kf['waterfall'], {
 		var _this = this;
 		this.modelObj = this.obj.find('.kf-waterfall-model');
 		this.model = this.modelObj.val();
-		this.modelObj.remove();
+		//this.modelObj.remove();
 		this.column = this.obj.find('.kf-waterfall-column');
 		if (this.config['moreBtn']) {
 			this.more = this.obj.find('.kf-waterfall-more');
@@ -112,7 +112,9 @@ kf.augment(kf['waterfall'], {
 				this.rankShowApp(index);
 			}
 		} else {
-			this.action();
+			if (this.config['moreBtn']) {
+				this.action();
+			}
 		}
 	},
 	// 排队显示操作

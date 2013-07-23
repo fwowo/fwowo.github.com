@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312" />
+<title>壁纸</title>
+<link rel="shortcut icon" type="image/x-icon" href="/common/f.ico" />
+<link rel="stylesheet" href="/common/base.css" />
+<link rel="stylesheet" href="/common/common.css" />
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<div class="kc-head"></div>
+<div class="kc-body">
+	<!-- 专辑 -->
+	<div id="kj-list" class="u-list">
+		<ul class="kf-list-wrap fn-clear">
+			<textarea class="kf-list-model fn-hide">
+			<li>
+				<div class="contain">
+					<div class="pic"><a href="javascript:showItem('{$sign}','{$title}')"><img src="{$img}"></a></div>
+					<div class="content"><h2><a href="javascript:showItem('{$sign}','{$title}')">{$title}</a></h2>{$content}</div>
+				</div>
+			</li>
+			</textarea>
+		</ul>
+		<div class="kf-list-page u-page fn-clear"><textarea class="kf-list-pagemodel fn-hide"><a href="javascript:void(0)">{$page}</a></textarea></div>
+	</div>
+	<!-- 列表 -->
+	<div id="kj-item" class="fn-hide">
+		<div class="u-back"><a href="javascript:showList()">壁纸列表</a> &gt;&gt; <em></em></div>
+		<div class="u-wrap fn-clear">
+			<div class="u-td kf-waterfall-column"></div>
+			<div class="u-td kf-waterfall-column"></div>
+			<div class="u-td kf-waterfall-column"></div>
+			<div class="u-td kf-waterfall-column"></div>
+		</div>
+		<textarea class="kf-waterfall-model fn-hide"><div class="wrap"><div class="pic"><a target="_blank" href="full.html#{$id}"><img src="{$img}"></a></div></div></textarea>
+	</div>
+</div>
+<div class="kc-foot"></div>
+<script charset="utf-8" src="/common/jquery-1.9.0.min.js"></script>
+<script charset="utf-8" src="/common/common.js"></script>
+<script charset="utf-8" src="/kf/kf.js"></script>
+<script charset="utf-8" src="index.js"></script>
+</body>
+</html>

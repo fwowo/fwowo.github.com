@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* @photo */
+.u-wrap{
+	margin: auto;
+	width: 960px;
+	padding: 30px 0;
+}
+.u-wrap .contain{
+	position: relative;
+	background-color: #000;
+}
+.u-wrap .pic{
+	padding: 20px 20px 0;
+	overflow: hidden;
+}
+.u-wrap .pic img{
+	display: block;
+	width: 100%;
+}
+.u-wrap .size{
+	padding: 0 20px;
+	text-align: right;
+	color: #a0a0a0;
+	line-height: 40px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 14px;
+}
+.u-wrap .error{
+	margin: auto;
+	width: 120px;
+	height: 120px;
+	padding: 20px 20px 0;
+}
+.u-wrap .errtxt{
+	line-height: 24px;
+	text-align: center;
+	font-family: "Microsoft YaHei";
+	color: #fff;
+	font-size: 14px;
+	padding-bottom: 30px;
+}
+.u-wrap .loadimg{
+	margin: auto;
+	width: 120px;
+	height: 120px;
+	padding: 20px;
+}
+.u-wrap .loadtxt{
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+	line-height: 120px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 15px;
+	text-shadow: 0 1px 2px #fff;
+	z-index: 2;
+}
+.u-wrap .loading{
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	background: url(img/loadimg.png) no-repeat center center;
+	-webkit-animation-name: running;
+	-webkit-animation-duration: 3600ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes running{
+	from { -webkit-transform: rotate(0deg) translateZ(0); }
+	to { -webkit-transform: rotate(360deg) translateZ(0); }
+}
+
+.u-turn{
+	position: absolute;
+	left: 0;
+	width: 60px;
+	height: 60px;
+	padding: 30px 0;
+	background: #000;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	cursor: pointer;
+}
+.u-turn-next{
+	left: auto;
+	right: 0;
+}
+.u-turn .arrows{
+	margin: auto;
+	width: 30px;
+	height: 60px;
+	overflow: hidden;
+	background: url(img/arrows.png) no-repeat left -60px;
+}
+.u-turn-next .arrows{
+	background-position: left top;
+}
+
