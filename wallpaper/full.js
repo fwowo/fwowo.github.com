@@ -62,6 +62,7 @@ var showFull = function(sign, id){
 			};
 			// 展示当前图片
 			var newImg = new Image();
+			newImg.src = thisData['fullsize'];
 			if (newImg.complete) {
 				$('#kj-size').html(newImg.width + 'x' + newImg.height);
 				$('#kj-pic').html(newImg);
@@ -84,7 +85,6 @@ var showFull = function(sign, id){
 					});
 				};
 			}
-			newImg.src = thisData['fullsize'];
 		} else {
 			$('#kj-pic').html('');
 			$('#kj-pic').append('<p class="error"><img src="img/jpeg.png"></p>');
