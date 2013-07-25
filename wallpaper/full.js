@@ -16,7 +16,7 @@ var showFull = function(sign, id){
 	$('#kj-size').html('&nbsp;');
 	
 	// 获取内容
-	$.getJSON('json/' + sign + '.txt?r=' + Math.random(), function(response){
+	$.getJSON('json/' + sign + '.txt?r=' + rand, function(response){
 		var data = response.data;
 		var dataLen = data.length;
 		var thisData = null;

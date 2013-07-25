@@ -10,7 +10,7 @@ if (hash != '') {
 
 kf['host'] = '';
 // 显示list
-kf.use('list1.0,waterfall1.2', function(){
+kf.use('list1.0,waterfall1.3', function(){
 	kf.augment(kf['list'], {
 		show: function(){
 			var _this = this;
@@ -39,23 +39,35 @@ kf.use('list1.0,waterfall1.2', function(){
 	});
 });
 var showList = function(){
+	kItem[hashSign].pause();
 	location.href = '#';
 	document.title = '壁纸';
-	$('#kj-item').addClass('fn-hide');
+	$('.kj-item-sign').addClass('fn-hide');
 	$('#kj-list').removeClass('fn-hide');
 };
 // 显示item
+var kItem = {};
 var showItem = function(sign, title){
+	hashSign = sign;
 	location.href = '#' + sign;
 	document.title = title;
-	$('#kj-item .u-back em').html(title);
-	$('#kj-item .u-td').html('');
 	$('#kj-list').addClass('fn-hide');
-	$('#kj-item').removeClass('fn-hide');
-	var kItem = new kf.waterfall('kj-item', {
-		action: 'json/' + sign + '.txt',
-		effect: 'fade',
-		buffer: 'img',
-		moreBtn: false
-	});
+	var itemObj = $('#kj-item-' + sign);
+	if (itemObj.length == 0){
+		// 创建
+		itemObj = $('#kj-item').clone();
+		itemObj.attr('id', 'kj-item-' + sign);
+		$('#kj-item-wrap').append(itemObj);
+		itemObj.find('.u-back em').html(title);
+		itemObj.removeClass('fn-hide');
+		kItem[sign] = new kf.waterfall(itemObj, {
+			action: 'json/' + sign + '.txt',
+			effect: 'fade',
+			buffer: 'img',
+			moreBtn: false
+		});
+	} else {
+		itemObj.removeClass('fn-hide');
+		kItem[sign].play();
+	}
 };

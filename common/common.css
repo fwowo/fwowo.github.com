@@ -25,6 +25,7 @@ html{
 .kc-head .nav{
 	float: right;
 	position: relative;
+	z-index: 49;
 }
 .kc-head a.link{
 	float: left;
