@@ -66,8 +66,16 @@
 	-webkit-animation-duration: 3600ms;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
+	-moz-animation-name: running;
+	-moz-animation-duration: 3600ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
 }
 @-webkit-keyframes running{
+	from { -webkit-transform: rotate(0deg) translateZ(0); }
+	to { -webkit-transform: rotate(360deg) translateZ(0); }
+}
+@-moz-keyframes running{
 	from { -webkit-transform: rotate(0deg) translateZ(0); }
 	to { -webkit-transform: rotate(360deg) translateZ(0); }
 }
