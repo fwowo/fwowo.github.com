@@ -76,8 +76,8 @@
 	to { -webkit-transform: rotate(360deg) translateZ(0); }
 }
 @-moz-keyframes running{
-	from { -webkit-transform: rotate(0deg) translateZ(0); }
-	to { -webkit-transform: rotate(360deg) translateZ(0); }
+	from { -moz-transform: rotate(0deg) translateZ(0); }
+	to { -moz-transform: rotate(360deg) translateZ(0); }
 }
 
 .u-turn{
