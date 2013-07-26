@@ -22,6 +22,7 @@ var showFull = function(sign, id){
 		var thisData = null;
 		var thisIndex = -1;
 		for (i=0; i<dataLen; i++) {
+			// 查找当前项
 			if (data[i]['id'] == id) {
 				thisIndex = i;
 				thisData = data[i];
@@ -29,6 +30,10 @@ var showFull = function(sign, id){
 			}
 		}
 		if (thisData) {
+			// 重置fullsize
+			if (thisData['fullsize'] == '') {
+				thisData['fullsize'] = thisData['img'].replace('/bth_', '/') + '~original';
+			}
 			// 获取前后id
 			var getNext = function(){
 				var preId = thisIndex - 1;
