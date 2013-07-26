@@ -17,7 +17,7 @@ kf.use('list1.0,waterfall1.3', function(){
 			this.wrapObj.html('');
 			$.each(_this.data, function(index){
 				if (index > 0 && index % 4 == 0) {
-					_this.wrapObj.append('<div class="space fn-clear"></div>');
+					_this.wrapObj.append('<div class="space"></div>');
 				}
 				var content = _this.model;
 				$.each(this, function(key, val){

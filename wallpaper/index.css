@@ -33,6 +33,7 @@
 	text-decoration: none;
 }
 .u-list .space{
+	clear: both;
 	margin-bottom: 10px;
 	width: 100%;
 	height: 10px;
