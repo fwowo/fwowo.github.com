@@ -1,0 +1,141 @@
+<h1>slide1.1</h1>
+<h2>约定</h2>
+<div class="content">
+	<p>.kf-slide-wrap 默认为滚动元素容器</p>
+	<p>.kf-slide-content 默认为滚动元素内容容器</p>
+	<p>.kf-slide-pannel 默认为滚动元素内容</p>
+	<p>若.kf-slide-content不存在，.kf-slide-wrap下的ul替之，若.kf-slide-pannel不存在，.kf-slide-wrap下的li替之。</p>
+</div>
+<h2>代码</h2>
+<div class="content">
+	<div class="code">
+<xmp>kf.use('slide1.1', function(){
+	var slide = new kf.slide(Obj, Params);
+});</xmp>
+	</div>
+</div>
+<h2>Params</h2>
+<div class="content">
+	<p>effect 切换效果，比如 horizontal | vertical | fade，默认值 horizontal</p>
+	<p>autoPlay 是否自动播放，默认值 true</p>
+	<p>autoTime 自动切换时间差，单位毫秒，默认值 5000</p>
+	<p>autoRound 是否循环，默认值 true</p>
+	<p>iconState 是否展示小图标，默认值 true</p>
+	<p>iconEvent 小图标触发事件，比如 mouseover | click，默认值 mouseover</p>
+</div>
+<h2>Demo</h2>
+<div class="content">
+<!-- demo start -->
+<style>
+#kj-slide{
+	position: relative;
+	width: 755px;
+	height: 260px;
+	overflow: hidden;
+	border: solid 5px #222;
+}
+.kf-slide-wrap, .kf-slide-wrap li{
+	width: 755px;
+	height: 260px;
+	overflow: hidden;
+}
+.kf-slide-icon{
+	position: absolute;
+	left: 6px;
+	bottom: 4px;
+	z-index: 9;
+}
+.kf-slide-icon li{
+	float: left;
+	margin-right: 6px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #333;
+	text-indent: -99px;
+	overflow: hidden;
+}
+.kf-slide-icon li.current{
+	background-color: #f60;
+}
+</style>
+<div id="kj-slide">
+	<div class="kf-slide-wrap">
+		<ul>
+			<li><img src="http://img04.taobaocdn.com/tps/i4/T1gaCSXvNdXXbByyEK-755-260.jpg"></li>
+			<li><img src="http://img04.taobaocdn.com/tps/i4/T1tr1UXAlbXXbByyEK-755-260.jpg"></li>
+			<li><img src="http://img02.taobaocdn.com/tps/i2/T1vgSOXzVfXXbByyEK-755-260.jpg"></li>
+			<li><img src="http://img03.taobaocdn.com/tps/i3/T1QFuSXxVgXXbByyEK-755-260.jpg"></li>
+		</ul>
+	</div>
+</div>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('slide1.1', function(){
+	var slide = new kf.slide('kj-slide', {
+		autoRound: false
+	});
+});
+</script>
+<!-- demo end -->
+</div>
+<h2>Demo代码</h2>
+<div class="content">
+	<div class="code">
+<xmp><style>
+#kj-slide{
+	position: relative;
+	width: 755px;
+	height: 260px;
+	overflow: hidden;
+	border: solid 5px #222;
+}
+.kf-slide-wrap, .kf-slide-wrap li{
+	width: 755px;
+	height: 260px;
+	overflow: hidden;
+}
+.kf-slide-icon{
+	position: absolute;
+	left: 6px;
+	bottom: 4px;
+	z-index: 9;
+}
+.kf-slide-icon li{
+	float: left;
+	margin-right: 6px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #333;
+	text-indent: -99px;
+	overflow: hidden;
+}
+.kf-slide-icon li.current{
+	background-color: #f60;
+}
+</style>
+<div id="kj-slide">
+	<div class="kf-slide-wrap">
+		<ul>
+			<li><img src="http://img04.taobaocdn.com/tps/i4/T1gaCSXvNdXXbByyEK-755-260.jpg"></li>
+			<li><img src="http://img04.taobaocdn.com/tps/i4/T1tr1UXAlbXXbByyEK-755-260.jpg"></li>
+			<li><img src="http://img02.taobaocdn.com/tps/i2/T1vgSOXzVfXXbByyEK-755-260.jpg"></li>
+			<li><img src="http://img03.taobaocdn.com/tps/i3/T1QFuSXxVgXXbByyEK-755-260.jpg"></li>
+		</ul>
+	</div>
+</div>
+<script src="http://fwowo.com/common/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.com/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('slide1.1', function(){
+	var slide = new kf.slide('kj-slide', {
+		autoRound: false
+	});
+});
+</script></xmp>
+	</div>
+</div>

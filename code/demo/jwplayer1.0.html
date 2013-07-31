@@ -1,0 +1,57 @@
+<h1>jwplayer1.0</h1>
+<h2>关于</h2>
+<div class="content">
+	jwplayer1.0仅是对jwplayer 6.2 播放器做了一个重新的包装，便于页面调用，及统一kf执行方法。
+</div>
+<h2>代码</h2>
+<div class="content">
+	<div class="code">
+<xmp>kf.use('jwplayer1.0', function(){
+	var jwplayer = kf['jwplayer'];
+	jwplayer(Obj, Params);
+});</xmp>
+	</div>
+</div>
+<h2>Params</h2>
+<div class="content">
+	<p>width 播放器宽度，默认 600</p>
+	<p>height 播放器高度，默认 400</p>
+	<p>image 播放器初始图片</p>
+	<p>file 播放文件</p>
+	<p>autostart 是否自动播放，默认 true</p>
+</div>
+<h2>Demo</h2>
+<div class="content">
+<!-- demo start -->
+<div id="player"></div>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('jwplayer1.0', function(){
+	var jw = kf['jwplayer'];
+	jw('player', {
+		image: "http://www.ckplayer.com/images/loadimg.jpg",
+		file: "http://movie.ks.js.cn/flv/2011/11/8-1.flv"
+	});
+});
+</script>
+<!-- demo end -->
+</div>
+<h2>Demo代码</h2>
+<div class="content">
+	<div class="code">
+<xmp><div id="player"></div>
+<script src="http://fwowo.com/common/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.com/kf/kf.js"></script>
+<script>
+kf.use('jwplayer1.0', function(){
+	var jw = kf['jwplayer'];
+	jw('player', {
+		image: "http://www.ckplayer.com/images/loadimg.jpg",
+		file: "http://movie.ks.js.cn/flv/2011/11/8-1.flv"
+	});
+});
+</script></xmp>
+	</div>
+</div>

@@ -1,0 +1,161 @@
+<h1>tab1.1</h1>
+<h2>约定</h2>
+<div class="content">
+	<p>.kf-tab-option 默认为切换选择项</p>
+	<p>.kf-tab-pannel 默认为选择项对应面板</p>
+</div>
+<h2>代码</h2>
+<div class="content">
+	<div class="code">
+<xmp>kf.use('tab1.1', function(){
+	var tab = new kf.tab(Obj, Params);
+});</xmp>
+	</div>
+</div>
+<h2>Params</h2>
+<div class="content">
+	<p>eventType 触发动作，比如 mouseover | click，默认值 mouseover</p>
+	<p>index 初始显示序号，默认值 0</p>
+	<p>option 重置选择项对象，默认值 .kf-tab-option</p>
+	<p>optionClass 对象选中时样式名称，默认值 current</p>
+	<p>pannel 重置面板对象，默认值 .kf-tab-pannel</p>
+	<p>pannelClass 对象选中时样式名称，默认值 current</p>
+	<p>callback(index) 回调函数，当option被触发，并执行切换结束后被执行。</p>
+</div>
+<h2>Demo</h2>
+<div class="content">
+<!-- demo start -->
+<style>
+#kj-tab{
+	border: solid 1px #ccc;
+}
+.kf-tab-head{
+	height: 30px;
+	border-bottom: solid 1px #ccc;
+}
+.kf-tab-head ul{
+	position: absolute;
+	margin: 6px 10px 0;
+}
+.kf-tab-head li{
+	float: left;
+	height: 23px;
+	line-height: 23px;
+	margin-right: 10px;
+	border: solid 1px #ccc;
+	padding: 0 10px;
+	background-color: #f0f0f0;
+	cursor: pointer;
+}
+.kf-tab-head li.current{
+	height: 24px;
+	line-height: 24px;
+	border-bottom: 0;
+	background-color: #fff;
+}
+.kf-tab-body li{
+	display: none;
+	padding: 20px;
+}
+.kf-tab-body li.current{
+	display: block;
+}
+</style>
+<div id="kj-tab">
+	<div class="kf-tab-head">
+		<ul class="fn-clear">
+			<li>option 1</li>
+			<li>option 2</li>
+			<li>option 3</li>
+		</ul>
+	</div>
+	<ul class="kf-tab-body">
+		<li>pannel 1</li>
+		<li>pannel 2</li>
+		<li>pannel 3</li>
+	</ul>
+</div>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('tab1.1', function(){
+	var tab = new kf.tab('kj-tab', {
+		option: '.kf-tab-head li',
+		pannel: '.kf-tab-body li',
+		callback: function(index){
+			console.log(index);
+		}
+	});
+});
+</script>
+<!-- demo end -->
+</div>
+<h2>Demo代码</h2>
+<div class="content">
+	<div class="code">
+<xmp><style>
+#kj-tab{
+	border: solid 1px #ccc;
+}
+.kf-tab-head{
+	height: 30px;
+	border-bottom: solid 1px #ccc;
+}
+.kf-tab-head ul{
+	position: absolute;
+	margin: 6px 10px 0;
+}
+.kf-tab-head li{
+	float: left;
+	height: 23px;
+	line-height: 23px;
+	margin-right: 10px;
+	border: solid 1px #ccc;
+	padding: 0 10px;
+	background-color: #f0f0f0;
+	cursor: pointer;
+}
+.kf-tab-head li.current{
+	height: 24px;
+	line-height: 24px;
+	border-bottom: 0;
+	background-color: #fff;
+}
+.kf-tab-body li{
+	display: none;
+	padding: 20px;
+}
+.kf-tab-body li.current{
+	display: block;
+}
+</style>
+<div id="kj-tab">
+	<div class="kf-tab-head">
+		<ul class="fn-clear">
+			<li>option 1</li>
+			<li>option 2</li>
+			<li>option 3</li>
+		</ul>
+	</div>
+	<ul class="kf-tab-body">
+		<li>pannel 1</li>
+		<li>pannel 2</li>
+		<li>pannel 3</li>
+	</ul>
+</div>
+<script src="http://fwowo.com/common/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.com/kf/kf.js"></script>
+<script>
+kf.use('tab1.1', function(){
+	var tab = new kf.tab('kj-tab', {
+		option: '.kf-tab-head li',
+		pannel: '.kf-tab-body li',
+		callback: function(index){
+			console.log(index);
+		}
+	});
+});
+</script></xmp>
+	</div>
+</div>

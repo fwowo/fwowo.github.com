@@ -1,0 +1,149 @@
+<h1>waterfall2.0</h1>
+<h2>约定</h2>
+<div class="content">
+	<p>.kf-waterfall-column 默认为瀑布流列内容容器</p>
+</div>
+<h2>代码</h2>
+<div class="content">
+	<div class="code">
+<xmp>kf.use('waterfall2.0', function(){
+	var waterfall = new kf.waterfall(Obj, Params);
+});</xmp>
+	</div>
+</div>
+<h2>Params</h2>
+<div class="content">
+	<p>column 瀑布流列内容容器，默认值 .kf-waterfall-column</p>
+	<p>model 模板代码</p>
+	<p>data 模板数据</p>
+	<p>loadimg 需加载图片字段</p>
+	<p>callback 回调函数，内容全部展示完毕后执行。</p>
+</div>
+<h2>调用函数</h2>
+<div class="content">
+	<p>pause 暂停加载展示</p>
+	<p>play 继续加载展示</p>
+</div>
+<h2>Demo</h2>
+<div class="content">
+<!-- demo start -->
+<style>
+.kf-waterfall-column{
+	float: left;
+	padding:4px;
+}
+.kf-waterfall-column li{
+	margin-bottom: 8px;
+	width: 200px;
+	padding: 5px;
+	border: solid 1px #ccc;
+}
+.kf-waterfall-column li img{
+	width: 100%;
+	display: block;
+}
+</style>
+<div id="kj-waterfall">
+	<div class="fn-clear">
+		<ul class="kf-waterfall-column"></ul>
+		<ul class="kf-waterfall-column"></ul>
+		<ul class="kf-waterfall-column"></ul>
+		<ul class="kf-waterfall-column"></ul>
+	</div>
+</div>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+var listData = [
+	{"img": "http://s8.mogujie.cn/b7/pic/130619/6lj8e_kqyvsucmnjbewrlwgfjeg5sckzsew_280x444.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130619/jfzxh_kqytazkznjbf66cugfjeg5sckzsew_440x597.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130618/jfzxh_kqyvkzkznjbfiwsugfjeg5sckzsew_388x600.jpg_225x999.jpg"},
+	{"img": "http://s4.mogujie.cn/b7/pic/130618/6lj8e_kqyte52znjbfix2ugfjeg5sckzsew_280x442.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130619/72hl7_kqywwvcxnjbegx2ugfjeg5sckzsew_490x834.jpg_225x999.jpg"},
+	{"img": "http://s4.mogujie.cn/b7/pic/130619/1lpfo_kqyxitkknjbfqssugfjeg5sckzsew_533x774.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130619/1lpfo_kqyueskwnjbgovtwgfjeg5sckzsew_630x935.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130619/1lpfo_kqyxcucwnjbfiq3wgfjeg5sckzsew_657x978.jpg_225x999.jpg"},
+	{"img": "http://s9.mogujie.cn/b7/pic/130619/1lpfo_kqytsvdinjbfqrlwgfjeg5sckzsew_434x681.jpg_225x999.jpg"},
+	{"img": "http://s9.mogujie.cn/b7/pic/130619/1lpfo_kqyu2u2znjbgoqkugfjeg5sckzsew_542x817.jpg_225x999.jpg"},
+	{"img": "http://s5.mogujie.cn/b7/pic/130619/qtun1_kqywovcknjbfqq3wgfjeg5sckzsew_498x715.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130619/1lpfo_kqywk52bnjbg2ssugfjeg5sckzsew_617x885.jpg_225x999.jpg"},
+	{"img": "http://s5.mogujie.cn/b7/pic/130619/1lpfo_kqyw652enjbf6rcugfjeg5sckzsew_717x996.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130619/qtun1_kqyuuzlinjbhsqlwgfjeg5sckzsew_395x540.jpg_225x999.jpg"},
+	{"img": "http://s4.mogujie.cn/b7/pic/130619/qtun1_kqyweu2xnjbdivsugfjeg5sckzsew_403x549.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130618/6lj8e_kqywi5slnjbhgzdwgfjeg5sckzsew_563x1000.jpg_225x999.jpg"}
+];
+kf.use('waterfall2.0', function(){
+	var waterfall = new kf.waterfall('kj-waterfall', {
+		model: '<li><img src="{$img}"></li>',
+		data: listData,
+		loadimg: 'img',
+		callback: function(){
+			console.log($('#kj-waterfall li').length);
+		}
+	});
+});
+</script>
+<!-- demo end -->
+</div>
+<h2>Demo代码</h2>
+<div class="content">
+	<div class="code">
+<xmp><style>
+.kf-waterfall-column{
+	float: left;
+	padding:4px;
+}
+.kf-waterfall-column li{
+	margin-bottom: 8px;
+	width: 200px;
+	padding: 5px;
+	border: solid 1px #ccc;
+}
+.kf-waterfall-column li img{
+	width: 100%;
+	display: block;
+}
+</style>
+<div id="kj-waterfall">
+	<div class="fn-clear">
+		<ul class="kf-waterfall-column"></ul>
+		<ul class="kf-waterfall-column"></ul>
+		<ul class="kf-waterfall-column"></ul>
+		<ul class="kf-waterfall-column"></ul>
+	</div>
+</div>
+<script src="http://fwowo.com/common/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.com/kf/kf.js"></script>
+<script>
+var listData = [
+	{"img": "http://s8.mogujie.cn/b7/pic/130619/6lj8e_kqyvsucmnjbewrlwgfjeg5sckzsew_280x444.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130619/jfzxh_kqytazkznjbf66cugfjeg5sckzsew_440x597.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130618/jfzxh_kqyvkzkznjbfiwsugfjeg5sckzsew_388x600.jpg_225x999.jpg"},
+	{"img": "http://s4.mogujie.cn/b7/pic/130618/6lj8e_kqyte52znjbfix2ugfjeg5sckzsew_280x442.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130619/72hl7_kqywwvcxnjbegx2ugfjeg5sckzsew_490x834.jpg_225x999.jpg"},
+	{"img": "http://s4.mogujie.cn/b7/pic/130619/1lpfo_kqyxitkknjbfqssugfjeg5sckzsew_533x774.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130619/1lpfo_kqyueskwnjbgovtwgfjeg5sckzsew_630x935.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130619/1lpfo_kqyxcucwnjbfiq3wgfjeg5sckzsew_657x978.jpg_225x999.jpg"},
+	{"img": "http://s9.mogujie.cn/b7/pic/130619/1lpfo_kqytsvdinjbfqrlwgfjeg5sckzsew_434x681.jpg_225x999.jpg"},
+	{"img": "http://s9.mogujie.cn/b7/pic/130619/1lpfo_kqyu2u2znjbgoqkugfjeg5sckzsew_542x817.jpg_225x999.jpg"},
+	{"img": "http://s5.mogujie.cn/b7/pic/130619/qtun1_kqywovcknjbfqq3wgfjeg5sckzsew_498x715.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130619/1lpfo_kqywk52bnjbg2ssugfjeg5sckzsew_617x885.jpg_225x999.jpg"},
+	{"img": "http://s5.mogujie.cn/b7/pic/130619/1lpfo_kqyw652enjbf6rcugfjeg5sckzsew_717x996.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130619/qtun1_kqyuuzlinjbhsqlwgfjeg5sckzsew_395x540.jpg_225x999.jpg"},
+	{"img": "http://s4.mogujie.cn/b7/pic/130619/qtun1_kqyweu2xnjbdivsugfjeg5sckzsew_403x549.jpg_225x999.jpg"},
+	{"img": "http://s6.mogujie.cn/b7/pic/130618/6lj8e_kqywi5slnjbhgzdwgfjeg5sckzsew_563x1000.jpg_225x999.jpg"}
+];
+kf.use('waterfall2.0', function(){
+	var waterfall = new kf.waterfall('kj-waterfall', {
+		model: '<li><img src="{$img}"></li>',
+		data: listData,
+		loadimg: 'img',
+		callback: function(){
+			console.log($('#kj-waterfall li').length);
+		}
+	});
+});
+</script></xmp>
+	</div>
+</div>

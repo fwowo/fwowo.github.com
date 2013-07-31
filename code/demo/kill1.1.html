@@ -1,0 +1,56 @@
+<h1>kill1.1</h1>
+<h2>代码</h2>
+<div class="content">
+	<div class="code">
+<xmp>kf.use('kill1.1', function(){
+	var kill = new kf.kill(Params);
+});</xmp>
+	</div>
+</div>
+<h2>Params</h2>
+<div class="content">
+	<p>msie 屏蔽ie版本，默认值 '6'</p>
+	<p>callback 若执行屏蔽，调用此函数</p>
+</div>
+<h2>Demo</h2>
+<div class="content">
+<!-- demo start -->
+<button id="J-show" style="padding:4px 8px;">模拟屏蔽</button>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('kill1.1', function(){
+	var kill = new kf.kill({
+		callback: function(){
+			console.log('show');
+		}
+	});
+	$('#J-show').click(function(){
+		kill.init();
+	});
+});
+</script>
+<!-- demo end -->
+</div>
+<h2>Demo代码</h2>
+<div class="content">
+	<div class="code">
+<xmp><button id="J-show" style="padding:4px 8px;">模拟屏蔽</button>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('kill1.1', function(){
+	var kill = new kf.kill({
+		callback: function(){
+			console.log('show');
+		}
+	});
+	$('#J-show').click(function(){
+		kill.init();
+	});
+});
+</script></xmp>
+	</div>
+</div>

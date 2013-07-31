@@ -1,0 +1,22 @@
+<h1>kf1.1</h1>
+<h2>关于kf</h2>
+<div class="content">
+	<p>kf是KF代码库的基础代码，也是KF代码库的入口。在页面中引入kf.js文件后，页面中便可以使用kf里面的函数异步加载KF组件。</p>
+	<p>kf目前包含两个函数augment和use，augment用于组件的创建，use用于组件的调用。</p>
+	<p>KF是基于jQuery1.9开发，所以页面中必须引入jQuery，为避免兼容问题，建议使用jQuery1.9版本。</p>
+</div>
+<h2>kf引入方式</h2>
+<div class="content">
+	<div class="code">
+<xmp><script src="http://fwowo.com/common/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.com/kf/kf.js"></script></xmp>
+	</div>
+	<p>kj.js为kj最新版本，kj将会尽量做到向下兼容，若要引用指定版本，比如1.0，可引入kj1.0.js文件。</p>
+</div>
+<h2>代码</h2>
+<div class="content">
+	<p>use一次最多可引入10个组件，引入多个组件时，组件名间使用逗号隔开。</p>
+	<div class="code">
+<xmp>kf.use('组件名1, 组件名2', function(){});</xmp>
+	</div>
+</div>

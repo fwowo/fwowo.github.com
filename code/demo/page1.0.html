@@ -1,0 +1,111 @@
+<h1>page1.0</h1>
+<h2>分页</h2>
+<div class="content">
+	<div class="code">
+<xmp>kf.use('page1.0', function(){
+	var page = new kf.page(Obj, Params);
+});</xmp>
+	</div>
+</div>
+<h2>Params</h2>
+<div class="content">
+	<p>model 模板代码</p>
+	<p>total 总页数，默认为 0</p>
+	<p>page 初始页码，默认为 1</p>
+	<p>hoverClass 鼠标经过时样式</p>
+	<p>currentClass 当前页码样式</p>
+	<p>callback 回调函数，当页码切换时执行，并返回当前页码。</p>
+</div>
+<h2>Demo</h2>
+<div class="content">
+<!-- demo start -->
+<style>
+.u-page{
+	margin-top: 30px;
+	text-align: right;
+}
+.u-page a{
+	float: left;
+	margin: 0 4px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	overflow: hidden;
+	text-decoration: none;
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #666;
+	color: #fff;
+	font-size: 14px;
+}
+.u-page a.hover{
+	background-color: #333;
+}
+.u-page a.current{
+	font-weight: bold;
+	background-color: #333;
+}
+</style>
+<div id="kj-page" class="u-page fn-clear"></div>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('page1.0', function(){
+	var page = new kf.page('kj-page', {
+		model: '<a href="#">{$page}</a>',
+		total: 5,
+		callback: function(page){
+			console.log(page);
+		}
+	});
+});
+</script>
+<!-- demo end -->
+</div>
+<h2>Demo代码</h2>
+<div class="content">
+	<div class="code">
+<xmp><style>
+.u-page{
+	margin-top: 30px;
+	text-align: right;
+}
+.u-page a{
+	float: left;
+	margin: 0 4px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	overflow: hidden;
+	text-decoration: none;
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #666;
+	color: #fff;
+	font-size: 14px;
+}
+.u-page a.hover{
+	background-color: #333;
+}
+.u-page a.current{
+	font-weight: bold;
+	background-color: #333;
+}
+</style>
+<div id="kj-page" class="u-page fn-clear"></div>
+<script src="http://fwowo.com/common/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.com/kf/kf.js"></script>
+<script>
+kf.use('page1.0', function(){
+	var page = new kf.page('kj-page', {
+		model: '<a href="#">{$page}</a>',
+		total: 5,
+		callback: function(page){
+			console.log(page);
+		}
+	});
+});
+</script></xmp>
+	</div>
+</div>

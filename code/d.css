@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* @index */
+.kc-body{
+	padding: 30px 0;
+	font-family: "Microsoft YaHei";
+}
+.u-wrap{
+	margin: auto;
+	width: 920px;
+	padding: 20px;
+	background-color: #fff;
+}
+.u-wrap h1{
+	font-size: 18px;
+	color: #404040;
+}
+.u-wrap h2{
+	margin-top: 20px;
+	font-size: 16px;
+	border-bottom: solid 1px #ddd;
+	color: #404040;
+	line-height: 30px;
+}
+.u-wrap .content{
+	padding: 10px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #808080;
+}
+.u-wrap .code{
+	padding: 10px;
+	border: dashed 1px #dfdfdf;
+	background-color: #f7f7f7;
+	line-height: 20px;
+	color: #606060;
+}
+.u-wrap .code xmp{
+	margin: 0;
+	word-wrap: break-word;
+	word-break: normal;
+	font-family: "Courier New", Courier, monospace;
+}

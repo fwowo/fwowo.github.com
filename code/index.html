@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="gb2312" />
-<title>代码库</title>
+<title>KF代码库</title>
 <link rel="shortcut icon" type="image/x-icon" href="/common/f.ico" />
 <link rel="stylesheet" href="/common/base.css" />
 <link rel="stylesheet" href="/common/common.css" />
@@ -11,11 +11,26 @@
 <body>
 <div class="kc-head"></div>
 <div class="kc-body">
-	<div id="kj-waterfall">
-		<div class="u-wrap fn-clear">
-			<div class="u-td kf-waterfall-column"></div>
+	<div class="u-wrap">
+		<h1>KF代码库</h1>
+		<div class="content">
+			<p>KF是基于jQuery的一个扩展，它包含一系列的函数应用。KF的初衷仅是抽取产品中常用的模块，减少代码的重复编写，提高开发效率，缩短产品开发周期。目前KF仅作用于此，至于其性能及效率暂未特别的去考虑，因为就目前实际应用来看，并未发现性能问题。</p>
+			<p>KF是按个人的编码习惯及浅薄的学识编写，有很多的不足和不完善，但就我个人来说，玩的还蛮开心的。</p>
+			<p>目前KF主要应用在本站（fwowo.com）的开发中，通过本站的规划发展，来完善KF的代码库。</p>
 		</div>
-		<textarea class="kf-waterfall-model fn-hide"><div class="wrap"><div class="contain"><div class="pic"><a target="_blank" href="{$href}"><img src="{$img}"></a></div><div class="title">{$title}</div></div></div></textarea>
+	</div>
+	<div class="u-list">
+		<ul id="kj-model" class="fn-clear">
+			<textarea class="kf-model fn-hide">
+			<li>
+				<h2><a target="_blank" href="d.html#{$title}{$version}">{$title}</a></h2>
+				<div class="content">
+					<p>{$content}</p>
+					<p class="ver">最新版本 {$version}</p>
+				</div>
+			</li>
+			</textarea>
+		</ul>
 	</div>
 </div>
 <div class="kc-foot"></div>

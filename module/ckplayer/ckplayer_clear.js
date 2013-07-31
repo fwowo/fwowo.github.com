@@ -1181,7 +1181,12 @@ var swfobject=function(){var D="undefined",r="object",S="Shockwave Flash",W="Sho
 ======================================================
 配置可置项
 */
-var ckPlayer = function(divId, width, height, mUrl, mPic) {
+var ckPlayer = function(divId, width, height, mUrl, mPic, autoPlay) {
+	if (autoPlay) {
+		var p = '1';
+	} else {
+		var p = '0';
+	}
 	var flashvars={
 		f:mUrl,//视频地址
 		a:'',//调用时的参数，只有当s>0的时候有效
@@ -1198,7 +1203,7 @@ var ckPlayer = function(divId, width, height, mUrl, mPic) {
 		z:'http://www.ckplayer.com/down/buffer.swf',//缓冲广告，只能放一个，swf格式
 		e:'1',//视频结束后的动作，0是调用js函数，1是循环播放，2是暂停播放，3是调用视频推荐列表的插件，4是清除视频流并调用js功能和1差不多
 		v:'80',//默认音量，0-100之间
-		p:'1',//视频默认0是暂停，1是播放
+		p: p,//视频默认0是暂停，1是播放
 		h:'0',//播放http视频流时采用何种拖动方法，=0不使用任意拖动，=1是使用按关键帧，=2是按时间点，=3是自动判断按什么(如果视频格式是.mp4就按关键帧，.flv就按关键时间)，=4也是自动判断(只要包含字符mp4就按mp4来，只要包含字符flv就按flv来)
 		q:'',//视频流拖动时参考函数，默认是start
 		m:'0',//默认是否采用点击播放按钮后再加载视频，0不是，1是,设置成1时不要有前置广告

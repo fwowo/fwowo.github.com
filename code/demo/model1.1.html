@@ -1,0 +1,76 @@
+<h1>model1.1</h1>
+<h2>代码</h2>
+<div class="content">
+	<div class="code">
+<xmp>kf.use('model1.1', function(){
+	var model = new kf.model(Obj, Params);
+});</xmp>
+	</div>
+</div>
+<h2>Params</h2>
+<div class="content">
+	<p>model 模板代码</p>
+	<p>data 模板数据</p>
+	<p>callback 回调函数，当data填充完成后被执行。</p>
+</div>
+<h2>Demo</h2>
+<div class="content">
+<!-- demo start -->
+<style>
+#kj-model{}
+#kj-model li{
+	float: left;
+	margin-right: 10px;
+	width: 80px;
+	height: 30px;
+	padding: 10px;
+	border: solid 1px #ccc;
+}
+</style>
+<ul id="kj-model" class="fn-clear"></ul>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('model1.1', function(){
+	var model = new kf.model('kj-model', {
+		model: '<li>{$title}</li>',
+		data: [{'title': '标题1'}, {'title': '标题2'}, {'title': '标题3'}],
+		callback: function(){
+			console.log($('#kj-model li').length);
+		}
+	});
+});
+</script>
+<!-- demo end -->
+</div>
+<h2>Demo代码</h2>
+<div class="content">
+	<div class="code">
+<xmp><style>
+#kj-model{}
+#kj-model li{
+	float: left;
+	margin-right: 10px;
+	width: 80px;
+	height: 30px;
+	padding: 10px;
+	border: solid 1px #ccc;
+}
+</style>
+<ul id="kj-model" class="fn-clear"></ul>
+<script src="http://fwowo.com/common/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.com/kf/kf.js"></script>
+<script>
+kf.use('model1.1', function(){
+	var model = new kf.model('kj-model', {
+		model: '<li>{$title}</li>',
+		data: [{'title': '标题1'}, {'title': '标题2'}, {'title': '标题3'}],
+		callback: function(){
+			console.log($('#kj-model li').length);
+		}
+	});
+});
+</script></xmp>
+	</div>
+</div>

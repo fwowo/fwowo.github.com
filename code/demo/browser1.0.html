@@ -1,0 +1,44 @@
+<h1>browser1.0</h1>
+<h2>key值</h2>
+<div class="content">
+	<p>ua 浏览器信息</p>
+	<p>browser 浏览器类型</p>
+	<p>version 浏览器版本</p>
+</div>
+<h2>代码</h2>
+<div class="content">
+	<div class="code">
+<xmp>kf.use('browser1.0', function(){
+	var browser = kf.browser;
+});</xmp>
+	</div>
+</div>
+<h2>Demo</h2>
+<div class="content">
+<!-- demo start -->
+<div id="kj-browser"></div>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('browser1.0', function(){
+	var browser = kf.browser;
+	$('#kj-browser').html('当前浏览器信息：' + browser['ua'] + '<br>当前浏览器类型：' + browser['browser'] + '<br>当前浏览器版本：' + browser['version']);
+});
+</script>
+<!-- demo end -->
+</div>
+<h2>Demo代码</h2>
+<div class="content">
+	<div class="code">
+<xmp><div id="kj-browser"></div>
+<script src="http://fwowo.com/common/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.com/kf/kf.js"></script>
+<script>
+kf.use('browser1.0', function(){
+	var browser = kf.browser;
+	$('#kj-browser').html('当前浏览器信息：' + browser['ua'] + '<br>当前浏览器类型：' + browser['browser'] + '<br>当前浏览器版本：' + browser['version']);
+});
+</script></xmp>
+	</div>
+</div>

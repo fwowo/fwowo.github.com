@@ -1,0 +1,172 @@
+<h1>datepicker1.0</h1>
+<h2>关于</h2>
+<div class="content">
+	datepicker1.0仅是对zebra-datepicker插件做了一个重新的包装，便于页面调用，及统一kf执行方法。
+</div>
+<h2>代码</h2>
+<div class="content">
+	<div class="code">
+<xmp>kf.use('datepicker1.0', function(){
+	var datepicker = kf['datepicker'];
+	datepicker(Obj, Params);
+});</xmp>
+	</div>
+</div>
+<h2>Params</h2>
+<div class="content">
+	<p>direction 日期区间限定，true表示今天起，常用的如：true | 1 | [1, 10] | ['2012-08-01', '2012-08-12'] | ['2012-08-01', false]</p>
+	<p>disabled_dates 日期指定限定，格式为 ['days months years weekday']，比如限定周六和周日不可选 ['* * * 0,6']</p>
+	<p>pair 使用双日期来选择日期区间时使用，在开始日期设定参数，设定结束日期对象，比如：$('#kj-date3-end')</p>
+	<p>format 设置日期展示格式，比如 'M d, Y'</p>
+	<p>show_week_number 显示周数，值为 'Wk'</p>
+	<p>view 初始界面，比如 'years'</p>
+	<p>onChange 日期界面改变时触发 function(view, elements){}</p>
+	<p>always_visible 将日期控件固定在某对象中，比如 $('#dateplace')</p>
+</div>
+<h2>Demo</h2>
+<div class="content">
+<!-- demo start -->
+<style type="text/css">
+.content input{
+	padding: 4px;
+	border-radius: 4px;
+	border-width: 1px;
+}
+</style>
+<p>普通模式：<input id="kj-date1" type="text" /></p>
+<p class="fn-mt10">日期限定：<input id="kj-date2" type="text" /></p>
+<p class="fn-mt10">日期周期：<input id="kj-date3-start" type="text" /> - <input id="kj-date3-end" type="text" /></p>
+<p class="fn-mt10">日期格式：<input id="kj-date4" type="text" /></p>
+<p class="fn-mt10">周数：<input id="kj-date5" type="text" /></p>
+<p class="fn-mt10">初始界面：<input id="kj-date6" type="text" /></p>
+<p class="fn-mt10">change交互：<input id="kj-date7" type="text" /> （view切换时触发）</p>
+<p class="fn-mt10">固定位置：<input id="kj-date8" type="text" /></p>
+<div id="dateplace" style="height:237px;"></div>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('datepicker1.0', function(){
+	var datepicker = kf['datepicker'];
+	// 普通模式
+	datepicker('kj-date1');
+	
+	// 日期限定
+	datepicker('kj-date2', {
+		direction: true,
+		disabled_dates: ['* * * 0,6']
+	});
+	
+	// 日期周期
+	datepicker('kj-date3-start', {
+		direction: true,
+		pair: $('#kj-date3-end')
+	});
+	datepicker('kj-date3-end', {
+		direction: true
+	});
+	
+	// 日期格式
+	datepicker('kj-date4', {
+		format: 'M d, Y'
+	});
+	
+	// 周数
+	datepicker('kj-date5', {
+		show_week_number: 'Wk'
+	});
+	
+	// 初始界面
+	datepicker('kj-date6', {
+		view: 'years'
+	});
+	
+	// change交互
+	datepicker('kj-date7', {
+		onChange: function(view, elements) {
+			console.log(view);
+			console.log(elements);
+		}
+	});
+	
+	// 固定位置
+	datepicker('kj-date8', {
+		always_visible: $('#dateplace')
+	});
+});
+</script>
+<!-- demo end -->
+</div>
+<h2>Demo代码</h2>
+<div class="content">
+	<div class="code">
+<xmp><style type="text/css">
+.content input{
+	padding: 4px;
+	border-radius: 4px;
+	border-width: 1px;
+}
+</style>
+<p>普通模式：<input id="kj-date1" type="text" /></p>
+<p class="fn-mt10">日期限定：<input id="kj-date2" type="text" /></p>
+<p class="fn-mt10">日期周期：<input id="kj-date3-start" type="text" /> - <input id="kj-date3-end" type="text" /></p>
+<p class="fn-mt10">日期格式：<input id="kj-date4" type="text" /></p>
+<p class="fn-mt10">周数：<input id="kj-date5" type="text" /></p>
+<p class="fn-mt10">初始界面：<input id="kj-date6" type="text" /></p>
+<p class="fn-mt10">change交互：<input id="kj-date7" type="text" /> （view切换时触发）</p>
+<p class="fn-mt10">固定位置：<input id="kj-date8" type="text" /></p>
+<div id="dateplace" style="height:237px;"></div>
+<script src="http://fwowo.com/common/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.com/kf/kf.js"></script>
+<script>
+kf.use('datepicker1.0', function(){
+	var datepicker = kf['datepicker'];
+	// 普通模式
+	datepicker('kj-date1');
+	
+	// 日期限定
+	datepicker('kj-date2', {
+		direction: true,
+		disabled_dates: ['* * * 0,6']
+	});
+	
+	// 日期周期
+	datepicker('kj-date3-start', {
+		direction: true,
+		pair: $('#kj-date3-end')
+	});
+	datepicker('kj-date3-end', {
+		direction: true
+	});
+	
+	// 日期格式
+	datepicker('kj-date4', {
+		format: 'M d, Y'
+	});
+	
+	// 周数
+	datepicker('kj-date5', {
+		show_week_number: 'Wk'
+	});
+	
+	// 初始界面
+	datepicker('kj-date6', {
+		view: 'years'
+	});
+	
+	// change交互
+	datepicker('kj-date7', {
+		onChange: function(view, elements) {
+			console.log(view);
+			console.log(elements);
+		}
+	});
+	
+	// 固定位置
+	datepicker('kj-date8', {
+		always_visible: $('#dateplace')
+	});
+});
+</script></xmp>
+	</div>
+</div>

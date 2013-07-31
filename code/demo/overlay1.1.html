@@ -1,0 +1,105 @@
+<h1>overlay1.1</h1>
+<h2>代码</h2>
+<div class="content">
+	<div class="code">
+<xmp>kf.use('overlay1.1', function(){
+	var overlay = new kf.overlay(Params);
+});</xmp>
+	</div>
+</div>
+<h2>Params</h2>
+<div class="content">
+	<p>width 弹出框宽度，默认值 'auto'</p>
+	<p>height 弹出框高度，默认值 'auto'</p>
+	<p>closeBtn 是否有关闭按钮，默认值 true</p>
+	<p>headContent 弹出框head内容，默认值 null</p>
+	<p>bodyContent 弹出框body内容，默认值 null</p>
+	<p>footContent 弹出框foot内容，默认值 null</p>
+	<p>mask 是否有半透明背景，默认值 true</p>
+	<p>maskClose 点击背景是否触发关闭，默认值 true</p>
+	<p>showCallback 提出框展现时回调函数</p>
+	<p>closeCallback 提出框关闭时回调函数</p>
+</div>
+<h2>调用函数</h2>
+<div class="content">
+	<p>content 重置弹出框内容</p>
+	<p>show 显示弹出框</p>
+	<p>hide 隐藏提出框</p>
+</div>
+<h2>Demo</h2>
+<div class="content">
+<!-- demo start -->
+<style>
+.kf-overlay-close{
+	position: absolute;
+	right: 10px;
+	top: 9px;
+	width: 12px;
+	height: 12px;
+	background: url(http://img01.taobaocdn.com/tps/i1/T1KQ1VXtRcXXcbU07.-12-12.gif) no-repeat left top;
+	overflow: hidden;
+}
+</style>
+<button id="J-show" style="padding:4px 8px;">显示弹出框</button>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('overlay1.1', function(){
+	var overlay = new kf.overlay({
+		showCallback: function(){
+			console.log('show');
+		},
+		closeCallback: function(){
+			console.log('hide');
+		}
+	});
+	overlay.content({
+		bodyContent: '<img src="http://img03.taobaocdn.com/tps/i3/T1QFuSXxVgXXbByyEK-755-260.jpg">',
+	});
+	$('#J-show').click(function(){
+		overlay.show();
+	});
+});
+</script>
+<!-- demo end -->
+</div>
+<h2>Demo代码</h2>
+<div class="content">
+	<div class="code">
+<xmp><style>
+.kf-overlay-close{
+	position: absolute;
+	right: 10px;
+	top: 9px;
+	width: 12px;
+	height: 12px;
+	background: url(http://img01.taobaocdn.com/tps/i1/T1KQ1VXtRcXXcbU07.-12-12.gif) no-repeat left top;
+	overflow: hidden;
+}
+</style>
+<button id="J-show" style="padding:4px 8px;">显示弹出框</button>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf['host'] = '';
+kf.use('overlay1.1', function(){
+	var overlay = new kf.overlay({
+		showCallback: function(){
+			console.log('show');
+		},
+		closeCallback: function(){
+			console.log('hide');
+		}
+	});
+	overlay.content({
+		closeBtn: true,
+		bodyContent: '<img src="http://img03.taobaocdn.com/tps/i3/T1QFuSXxVgXXbByyEK-755-260.jpg">',
+	});
+	$('#J-show').click(function(){
+		overlay.show();
+	});
+});
+</script></xmp>
+	</div>
+</div>
