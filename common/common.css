@@ -21,6 +21,7 @@ html{
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 22px;
 	letter-spacing: 1px;
+	text-decoration: none;
 }
 .kc-head .nav{
 	float: right;

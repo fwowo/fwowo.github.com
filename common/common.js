@@ -1,5 +1,5 @@
 $('.kc-head').html('<div class="wrap fn-clear">\
-	<div class="logo">fwowo.com</div>\
+	<a class="logo" href="/">fwowo.com</a>\
 	<div class="nav fn-clear">\
 		<span id="kj-headnavact" class="fn-left">\
 			<div id="kj-headnav" class="icon fn-hide">\
