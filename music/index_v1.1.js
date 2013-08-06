@@ -1,3 +1,4 @@
+kf.use('common1.0', function(){});
 kf['audio'] = function(){
 	// 公用常量
 	this.player = document.getElementById('kj-audio');

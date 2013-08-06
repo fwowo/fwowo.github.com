@@ -1,16 +1,13 @@
 var topicContent = $.trim($('#kj-topic').val());
 $('#kj-topic').remove();
-
-$.getJSON("/index/topic.txt?rand=" + Math.random(), function(response){
-	var data = response['data'];
-	var dataLen = data.length;
-	var obj = $('.u-topic ul');
-	$.each(data, function(){
-		var newContent = topicContent;
-		$.each(this, function(key, val){
-			var newReg = new RegExp('{\\$' + key + '}', 'g');
-			newContent = newContent.replace(newReg, val);
+kf.use('common1.0, model1.1', function(){
+	$.getJSON("/index/topic.txt?rand=" + rand, function(response){
+		var data = response['data'];
+		var dataLen = data.length;
+		var obj = $('.u-topic ul');
+		var topicModel = new kf['model'](obj, {
+			model: topicContent,
+			data: data
 		});
-		obj.append(newContent);
 	});
 });

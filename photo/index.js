@@ -7,8 +7,7 @@ for (i=0; i<tdLen; i++) {
 	var tdObj = $('<div class="u-td kf-waterfall-column"></div>');
 	$('.u-wrap').append(tdObj);
 }
-kf['host'] = '';
-kf.use('waterfall1.2', function(){
+kf.use('common1.0, waterfall1.2', function(){
 	var waterfall = new kf.waterfall('kj-waterfall', {
 		action: 'json/photo_{$page}.txt',
 		effect: 'fade',

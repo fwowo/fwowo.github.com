@@ -1,6 +1,6 @@
 var rand = Math.random();
 
-// 获取模板
+// 鑾峰彇妯℃澘
 var wrapObj = $('#kj-wrap');
 var navObj = $('#kj-nav');
 
@@ -12,7 +12,7 @@ var itemObj = $('#kj-item');
 var modelItem = $.trim(itemObj.val());
 itemObj.remove();
 
-// 获取数据
+// 鑾峰彇鏁版嵁
 $.getJSON( 'json/cook.txt?r=' + rand, function(response){
 	var menuData = {};
 	var data = response.data;
@@ -51,7 +51,7 @@ $.getJSON( 'json/cook.txt?r=' + rand, function(response){
 	navObj.find('a:eq(0)').click();
 });
 
-// 显示数据
+// 鏄剧ず鏁版嵁
 var showItem = function(obj, data){
 	var rank = -1;
 	var len = data.length;
@@ -75,7 +75,7 @@ var showItem = function(obj, data){
 		}
 	}
 	function rankShowApp(val){
-		// 获取最短的td
+		// 鑾峰彇鏈�鐭殑td
 		var minObj = tdObj.eq(0);
 		var minHeight = minObj.height();
 		tdObj.each(function(){
@@ -84,7 +84,7 @@ var showItem = function(obj, data){
 				minObj = $(this);
 			}
 		});
-		// 创建数据
+		// 鍒涘缓鏁版嵁
 		var newItem = modelItem;
 		newItem = newItem.replace('{$img}', val['img']);
 		newItem = newItem.replace('{$title}', val['title']);
@@ -93,7 +93,7 @@ var showItem = function(obj, data){
 		newItemObj.click(function(){
 			showbox(val['id']);
 		});
-		// 插入数据
+		// 鎻掑叆鏁版嵁
 		newItemObj.css('display', 'none');
 		minObj.append(newItemObj);
 		newItemObj.fadeIn('fast', rankShow);
@@ -101,7 +101,7 @@ var showItem = function(obj, data){
 	rankShow();
 };
 
-// 显示box
+// 鏄剧ずbox
 var showbox = function(id){
 	var href = 'page/' + id.toLowerCase() + '.html?r=' + rand;
 	$('#kj-box').load(href);
@@ -111,7 +111,7 @@ var showbox = function(id){
 	$('.layer').css({'left': boxLeft, 'top': (docTop + 40)});
 	$('.layer').removeClass('fn-hide');
 };
-// 关闭box
+// 鍏抽棴box
 $('.layer .u-close').click(function(){
 	$('#kj-box').html('');
 	$('.layer').addClass('fn-hide');

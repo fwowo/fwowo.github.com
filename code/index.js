@@ -1,6 +1,5 @@
-kf['host'] = '';
-kf.use('model1.0', function(){
-	$.getJSON('json/index.txt?rand=' + Math.random(), function(response){
+kf.use('common1.0, model1.0', function(){
+	$.getJSON('json/index.txt?rand=' + rand, function(response){
 		var data = response.data;
 		var modelList = new kf['model']('kj-model', data, function(){
 			$('#kj-model li').each(function(index){

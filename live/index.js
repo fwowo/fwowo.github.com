@@ -1,4 +1,3 @@
-kf['host'] = '';
 kf.use('list1.0', function(){
 	var liveList = new kf.list('kj-list', {
 		action: 'json/live_{$page}.txt',

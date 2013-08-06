@@ -1,3 +1,8 @@
+// 公用变量
+var rand = Math.random();
+kf['host'] = '';
+
+// header
 $('.kc-head').html('<div class="wrap fn-clear">\
 	<a class="logo" href="/">fwowo.com</a>\
 	<div class="nav fn-clear">\
@@ -28,10 +33,9 @@ $('.kc-foot').html('<div class="wrap">\
 	<a href="#">关于本站</a>
 	<a href="#">友情链接</a>
 */
-
+// footer
 var headNav = $('#kj-headnav');
 var headNavLi = '<li><a href="{$href}"><img src="{$img}"></a></li>';
-var rand = Math.random();
 $.getJSON("/index/nav.txt?rand=" + rand, function(response){
 	var data = response['data'];
 	var dataLen = data.length;

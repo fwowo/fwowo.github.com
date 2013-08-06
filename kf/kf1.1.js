@@ -1,5 +1,9 @@
 var kf = {};
-kf['host'] = 'http://fwowo.com';
+if (document.location.host == 'localhost:202' || document.location.hostname == 'fwowo.com') {
+	kf['host'] = '';
+} else {
+	kf['host'] = 'http://fwowo.com';
+}
 kf['augment'] = function(fn, param) {
 	$.each(param, function(key, val) {
 		fn.prototype[key] = val;

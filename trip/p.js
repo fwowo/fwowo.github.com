@@ -1,4 +1,4 @@
-// 获取参数
+// 鑾峰彇鍙傛暟
 var url = document.URL;
 var query = {};
 var urlParam = url.split('?')[1];
@@ -20,11 +20,12 @@ if (query['sign']) {
 	location.href = '/trip/';
 }
 
-// 加载列表
+kf.use('common1.0', function(){});
+// 鍔犺浇鍒楄〃
 var mainObj = $('#kj-content');
 mainObj.load('page/' + sign + '.html?r=' + Math.random());
 
-// 获取标题
+// 鑾峰彇鏍囬
 $.getJSON('json/trip.txt?r=' + Math.random(), function(response){
 	var data = response.data;
 	var dataLen = data.length;

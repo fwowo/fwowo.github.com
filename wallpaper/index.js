@@ -8,9 +8,8 @@ if (hash != '') {
 	var hashTitle = '';
 }
 
-kf['host'] = '';
 // 显示list
-kf.use('list1.0,waterfall1.3', function(){
+kf.use('common1.0, list1.0, waterfall1.3', function(){
 	kf.augment(kf['list'], {
 		show: function(){
 			var _this = this;

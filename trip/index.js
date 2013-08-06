@@ -13,6 +13,7 @@ if (urlParam) {
 	});
 }
 
+kf.use('common1.0', function(){});
 // 创建类
 kf['simList'] = function(){
 	this.obj = $('#kj-list');

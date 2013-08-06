@@ -1,11 +1,10 @@
 @charset "utf-8";
-html {
-	background-color: #e8e8e8;
+.kc-body{
+	padding: 30px 0;
 }
-
 /* @common */
 .u-nav{
-	margin: 20px auto;
+	margin: auto;
 	width: 920px;
 	padding: 20px;
 	background-color: #fff;
@@ -29,7 +28,7 @@ html {
 	color: #fff;
 }
 h2{
-	margin: auto;
+	margin: 20px auto 0;
 	width: 940px;
 	padding: 0 10px;
 	font-size: 14px;
@@ -61,7 +60,7 @@ h2{
 	left: 0;
 	right: 0;
 	bottom: 0;
-	height: 48px;
+	height: 47px;
 	background-color: #000;
 	opacity: 0.7;
 	filter: alpha(opacity=70);
@@ -69,36 +68,20 @@ h2{
 .u-td .wrap .content{
 	position: absolute;
 	left: 0;
-	right: 6px;
-	bottom: 4px;
+	right: 7px;
+	bottom: 2px;
 	font-size: 14px;
 	font-family: "Microsoft YaHei";
 	color: #fff;
 	text-align: right;
-	line-height: 20px;
+	line-height: 21px;
 }
 .u-td .content em{
 	display: block;
 	text-align: right;
-	color: #808080;
+	color: #a0a0a0;
 	font-family: NSimSun, SimSun;
 	font-size: 12px;
-}
-
-.u-foot{
-	padding: 0 20px;
-	border-top: dashed 1px #d2d2d2;
-	line-height: 32px;
-	color: #aaa;
-	font-family: "Courier New", Courier, monospace;
-	font-size: 14px;
-}
-.u-foot a{
-	color: #aaa;
-	text-decoration: none;
-}
-.u-foot a:hover{
-	color: #ff9900;
 }
 
 /* @layer */

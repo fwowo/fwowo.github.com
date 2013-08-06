@@ -7,6 +7,8 @@ if (hash != '') {
 	location.href = '/wallpaper/';
 }
 
+kf.use('common1.0', function(){});
+
 var showFull = function(sign, id){
 	// loading
 	$('#kj-pic').html('<div class="loadimg">\
@@ -16,7 +18,7 @@ var showFull = function(sign, id){
 	$('#kj-size').html('&nbsp;');
 	
 	// 获取内容
-	$.getJSON('json/' + sign + '.txt?r=' + rand, function(response){
+	$.getJSON('json/' + sign + '.txt?r=' + Math.random(), function(response){
 		var data = response.data;
 		var dataLen = data.length;
 		var thisData = null;
