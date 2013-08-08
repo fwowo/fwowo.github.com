@@ -1,3 +1,4 @@
+kf.use('common1.0', function(){});
 var rand = Math.random();
 
 // 获取模板
