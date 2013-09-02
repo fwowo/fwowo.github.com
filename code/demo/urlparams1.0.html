@@ -1,0 +1,48 @@
+<h1>urlparams1.0</h1>
+<h2>key值</h2>
+<div class="content">
+	<p>search ?号后参数字典</p>
+	<p>hash #号后的部分</p>
+</div>
+<h2>代码</h2>
+<div class="content">
+	<div class="code">
+<xmp>kf.use('urlparams1.0', function(){
+	var params = kf.urlparams;
+});</xmp>
+	</div>
+</div>
+<h2>Demo</h2>
+<div class="content">
+<!-- demo start -->
+<div id="kj-params"></div>
+<script src="/common/jquery-1.9.0.min.js"></script>
+<script src="/kf/kf.js"></script>
+<script>
+kf.use('urlparams1.0', function(){
+	var params = kf.urlparams;
+	$.each(params['search'], function(key, val){
+		$('#kj-params').append('<span>' + key + '=' + val + '，</span>');
+	});
+	$('#kj-params').append('<span>#' + params['hash'] + '</span>');
+});
+</script>
+<!-- demo end -->
+</div>
+<h2>Demo代码</h2>
+<div class="content">
+	<div class="code">
+<xmp><div id="kj-params"></div>
+<script src="http://fwowo.com/common/jquery-1.9.0.min.js"></script>
+<script src="http://fwowo.com/kf/kf.js"></script>
+<script>
+kf.use('urlparams1.0', function(){
+	var params = kf.urlparams;
+	$.each(params['search'], function(key, val){
+		$('#kj-params').append('<span>' + key + '=' + val + '，</span>');
+	});
+	$('#kj-params').append('<span>#' + params['hash'] + '</span>');
+});
+</script></xmp>
+	</div>
+</div>
